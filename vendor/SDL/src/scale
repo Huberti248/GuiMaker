@@ -1,0 +1,1625 @@
+core\winrt\SDL_winrtapp_direct3d.cpp:            if (renderer && (SDL_strcmp(renderer->info.name, "direct3d11") == 0)) {
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:        SDL_Window *window = renderer->window;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *)renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *)renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *)renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *)renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *)renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    const SDL_bool istarget = renderer->target != NULL;
+render\direct3d\SDL_render_d3d.c:                const int backw = istarget ? renderer->target->w : data->pparams.BackBufferWidth;
+render\direct3d\SDL_render_d3d.c:                const int backh = istarget ? renderer->target->h : data->pparams.BackBufferHeight;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *renderdata = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    for (texture = renderer->textures; texture; texture = texture->next) {
+render\direct3d\SDL_render_d3d.c:    for (texture = renderer->textures; texture; texture = texture->next) {
+render\direct3d\SDL_render_d3d.c:    D3D_SetRenderTargetInternal(renderer, renderer->target);
+render\direct3d\SDL_render_d3d.c:    renderer->WindowEvent = D3D_WindowEvent;
+render\direct3d\SDL_render_d3d.c:    renderer->SupportsBlendMode = D3D_SupportsBlendMode;
+render\direct3d\SDL_render_d3d.c:    renderer->CreateTexture = D3D_CreateTexture;
+render\direct3d\SDL_render_d3d.c:    renderer->UpdateTexture = D3D_UpdateTexture;
+render\direct3d\SDL_render_d3d.c:    renderer->UpdateTextureYUV = D3D_UpdateTextureYUV;
+render\direct3d\SDL_render_d3d.c:    renderer->LockTexture = D3D_LockTexture;
+render\direct3d\SDL_render_d3d.c:    renderer->UnlockTexture = D3D_UnlockTexture;
+render\direct3d\SDL_render_d3d.c:    renderer->SetRenderTarget = D3D_SetRenderTarget;
+render\direct3d\SDL_render_d3d.c:    renderer->QueueSetViewport = D3D_QueueSetViewport;
+render\direct3d\SDL_render_d3d.c:    renderer->QueueSetDrawColor = D3D_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+render\direct3d\SDL_render_d3d.c:    renderer->QueueDrawPoints = D3D_QueueDrawPoints;
+render\direct3d\SDL_render_d3d.c:    renderer->QueueDrawLines = D3D_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+render\direct3d\SDL_render_d3d.c:    renderer->QueueFillRects = D3D_QueueFillRects;
+render\direct3d\SDL_render_d3d.c:    renderer->QueueCopy = D3D_QueueCopy;
+render\direct3d\SDL_render_d3d.c:    renderer->QueueCopyEx = D3D_QueueCopyEx;
+render\direct3d\SDL_render_d3d.c:    renderer->RunCommandQueue = D3D_RunCommandQueue;
+render\direct3d\SDL_render_d3d.c:    renderer->RenderReadPixels = D3D_RenderReadPixels;
+render\direct3d\SDL_render_d3d.c:    renderer->RenderPresent = D3D_RenderPresent;
+render\direct3d\SDL_render_d3d.c:    renderer->DestroyTexture = D3D_DestroyTexture;
+render\direct3d\SDL_render_d3d.c:    renderer->DestroyRenderer = D3D_DestroyRenderer;
+render\direct3d\SDL_render_d3d.c:    renderer->info = D3D_RenderDriver.info;
+render\direct3d\SDL_render_d3d.c:    renderer->info.flags = (SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
+render\direct3d\SDL_render_d3d.c:    renderer->driverdata = data;
+render\direct3d\SDL_render_d3d.c:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+render\direct3d\SDL_render_d3d.c:    renderer->info.max_texture_width = caps.MaxTextureWidth;
+render\direct3d\SDL_render_d3d.c:    renderer->info.max_texture_height = caps.MaxTextureHeight;
+render\direct3d\SDL_render_d3d.c:        renderer->info.flags |= SDL_RENDERER_TARGETTEXTURE;
+render\direct3d\SDL_render_d3d.c:            renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_YV12;
+render\direct3d\SDL_render_d3d.c:            renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_IYUV;
+render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+render\direct3d\SDL_render_d3d.c:    if (renderer->DestroyRenderer != D3D_DestroyRenderer) {
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    for (texture = renderer->textures; texture; texture = texture->next) {
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:            renderer->info.max_texture_width = renderer->info.max_texture_height = 16384;
+render\direct3d11\SDL_render_d3d11.c:            renderer->info.max_texture_width = renderer->info.max_texture_height = 8192;
+render\direct3d11\SDL_render_d3d11.c:            renderer->info.max_texture_width = renderer->info.max_texture_height = 4096;
+render\direct3d11\SDL_render_d3d11.c:            renderer->info.max_texture_width = renderer->info.max_texture_height = 2048;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:                outRect->left += renderer->viewport.x;
+render\direct3d11\SDL_render_d3d11.c:                outRect->right += renderer->viewport.x;
+render\direct3d11\SDL_render_d3d11.c:                outRect->top += renderer->viewport.y;
+render\direct3d11\SDL_render_d3d11.c:                outRect->bottom += renderer->viewport.y;
+render\direct3d11\SDL_render_d3d11.c:            outRect->top = renderer->viewport.w - sdlRect->x - sdlRect->w;
+render\direct3d11\SDL_render_d3d11.c:            outRect->bottom = renderer->viewport.w - sdlRect->x;
+render\direct3d11\SDL_render_d3d11.c:            outRect->left = renderer->viewport.w - sdlRect->x - sdlRect->w;
+render\direct3d11\SDL_render_d3d11.c:            outRect->right = renderer->viewport.w - sdlRect->x;
+render\direct3d11\SDL_render_d3d11.c:            outRect->top = renderer->viewport.h - sdlRect->y - sdlRect->h;
+render\direct3d11\SDL_render_d3d11.c:            outRect->bottom = renderer->viewport.h - sdlRect->y;
+render\direct3d11\SDL_render_d3d11.c:            outRect->left = renderer->viewport.h - sdlRect->y - sdlRect->h;
+render\direct3d11\SDL_render_d3d11.c:            outRect->right = renderer->viewport.h - sdlRect->y;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:        SDL_GetWindowWMInfo(renderer->window, &windowinfo);
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    SDL_GetWindowSize(renderer->window, &w, &h);
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *)renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *)renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *)renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData * data = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+render\direct3d11\SDL_render_d3d11.c:    if (renderer->info.flags & SDL_RENDERER_PRESENTVSYNC) {
+render\direct3d11\SDL_render_d3d11.c:    renderer->WindowEvent = D3D11_WindowEvent;
+render\direct3d11\SDL_render_d3d11.c:    renderer->SupportsBlendMode = D3D11_SupportsBlendMode;
+render\direct3d11\SDL_render_d3d11.c:    renderer->CreateTexture = D3D11_CreateTexture;
+render\direct3d11\SDL_render_d3d11.c:    renderer->UpdateTexture = D3D11_UpdateTexture;
+render\direct3d11\SDL_render_d3d11.c:    renderer->UpdateTextureYUV = D3D11_UpdateTextureYUV;
+render\direct3d11\SDL_render_d3d11.c:    renderer->LockTexture = D3D11_LockTexture;
+render\direct3d11\SDL_render_d3d11.c:    renderer->UnlockTexture = D3D11_UnlockTexture;
+render\direct3d11\SDL_render_d3d11.c:    renderer->SetRenderTarget = D3D11_SetRenderTarget;
+render\direct3d11\SDL_render_d3d11.c:    renderer->QueueSetViewport = D3D11_QueueSetViewport;
+render\direct3d11\SDL_render_d3d11.c:    renderer->QueueSetDrawColor = D3D11_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+render\direct3d11\SDL_render_d3d11.c:    renderer->QueueDrawPoints = D3D11_QueueDrawPoints;
+render\direct3d11\SDL_render_d3d11.c:    renderer->QueueDrawLines = D3D11_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+render\direct3d11\SDL_render_d3d11.c:    renderer->QueueFillRects = D3D11_QueueFillRects;
+render\direct3d11\SDL_render_d3d11.c:    renderer->QueueCopy = D3D11_QueueCopy;
+render\direct3d11\SDL_render_d3d11.c:    renderer->QueueCopyEx = D3D11_QueueCopyEx;
+render\direct3d11\SDL_render_d3d11.c:    renderer->RunCommandQueue = D3D11_RunCommandQueue;
+render\direct3d11\SDL_render_d3d11.c:    renderer->RenderReadPixels = D3D11_RenderReadPixels;
+render\direct3d11\SDL_render_d3d11.c:    renderer->RenderPresent = D3D11_RenderPresent;
+render\direct3d11\SDL_render_d3d11.c:    renderer->DestroyTexture = D3D11_DestroyTexture;
+render\direct3d11\SDL_render_d3d11.c:    renderer->DestroyRenderer = D3D11_DestroyRenderer;
+render\direct3d11\SDL_render_d3d11.c:    renderer->info = D3D11_RenderDriver.info;
+render\direct3d11\SDL_render_d3d11.c:    renderer->info.flags = (SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
+render\direct3d11\SDL_render_d3d11.c:    renderer->driverdata = data;
+render\direct3d11\SDL_render_d3d11.c:    renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+render\direct3d11\SDL_render_d3d11.c:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+render\direct3d11\SDL_render_d3d11.c:    renderer->window = window;
+render\direct3d11\SDL_render_winrt.cpp:    SDL_Window * sdlWindow = renderer->window;
+render\direct3d11\SDL_render_winrt.cpp:    if ( ! renderer->window ) {
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:        if (renderer->target != NULL) {
+render\metal\SDL_render_metal.m:            METAL_TextureData *texdata = (__bridge METAL_TextureData *)renderer->target->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    if (renderer->driverdata) {
+render\metal\SDL_render_metal.m:        METAL_RenderData *data = CFBridgingRelease(renderer->driverdata);
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+render\metal\SDL_render_metal.m:    renderer->driverdata = (void*)CFBridgingRetain(data);
+render\metal\SDL_render_metal.m:    renderer->window = window;
+render\metal\SDL_render_metal.m:    renderer->WindowEvent = METAL_WindowEvent;
+render\metal\SDL_render_metal.m:    renderer->GetOutputSize = METAL_GetOutputSize;
+render\metal\SDL_render_metal.m:    renderer->SupportsBlendMode = METAL_SupportsBlendMode;
+render\metal\SDL_render_metal.m:    renderer->CreateTexture = METAL_CreateTexture;
+render\metal\SDL_render_metal.m:    renderer->UpdateTexture = METAL_UpdateTexture;
+render\metal\SDL_render_metal.m:    renderer->UpdateTextureYUV = METAL_UpdateTextureYUV;
+render\metal\SDL_render_metal.m:    renderer->LockTexture = METAL_LockTexture;
+render\metal\SDL_render_metal.m:    renderer->UnlockTexture = METAL_UnlockTexture;
+render\metal\SDL_render_metal.m:    renderer->SetRenderTarget = METAL_SetRenderTarget;
+render\metal\SDL_render_metal.m:    renderer->QueueSetViewport = METAL_QueueSetViewport;
+render\metal\SDL_render_metal.m:    renderer->QueueSetDrawColor = METAL_QueueSetDrawColor;
+render\metal\SDL_render_metal.m:    renderer->QueueDrawPoints = METAL_QueueDrawPoints;
+render\metal\SDL_render_metal.m:    renderer->QueueDrawLines = METAL_QueueDrawPoints;  // lines and points queue the same way.
+render\metal\SDL_render_metal.m:    renderer->QueueFillRects = METAL_QueueFillRects;
+render\metal\SDL_render_metal.m:    renderer->QueueCopy = METAL_QueueCopy;
+render\metal\SDL_render_metal.m:    renderer->QueueCopyEx = METAL_QueueCopyEx;
+render\metal\SDL_render_metal.m:    renderer->RunCommandQueue = METAL_RunCommandQueue;
+render\metal\SDL_render_metal.m:    renderer->RenderReadPixels = METAL_RenderReadPixels;
+render\metal\SDL_render_metal.m:    renderer->RenderPresent = METAL_RenderPresent;
+render\metal\SDL_render_metal.m:    renderer->DestroyTexture = METAL_DestroyTexture;
+render\metal\SDL_render_metal.m:    renderer->DestroyRenderer = METAL_DestroyRenderer;
+render\metal\SDL_render_metal.m:    renderer->GetMetalLayer = METAL_GetMetalLayer;
+render\metal\SDL_render_metal.m:    renderer->GetMetalCommandEncoder = METAL_GetMetalCommandEncoder;
+render\metal\SDL_render_metal.m:    renderer->info = METAL_RenderDriver.info;
+render\metal\SDL_render_metal.m:    renderer->info.flags = (SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
+render\metal\SDL_render_metal.m:    renderer->always_batch = SDL_TRUE;
+render\metal\SDL_render_metal.m:            renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+render\metal\SDL_render_metal.m:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+render\metal\SDL_render_metal.m:    renderer->info.max_texture_width = maxtexsize;
+render\metal\SDL_render_metal.m:    renderer->info.max_texture_height = maxtexsize;
+render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:        if (SDL_GL_MakeCurrent(renderer->window, data->context) < 0) {
+render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    SDL_GL_GetDrawableSize(renderer->window, w, h);
+render\opengl\SDL_render_gl.c:    GL_RenderData *renderdata = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    GL_RenderData *renderdata = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    GL_RenderData *renderdata = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    data->drawstate.target = renderer->target;
+render\opengl\SDL_render_gl.c:        SDL_GL_GetDrawableSize(renderer->window, &data->drawstate.drawablew, &data->drawstate.drawableh);
+render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    Uint32 temp_format = renderer->target ? renderer->target->format : SDL_PIXELFORMAT_ARGB8888;
+render\opengl\SDL_render_gl.c:    data->glReadPixels(rect->x, renderer->target ? rect->y : (h-rect->y)-rect->h,
+render\opengl\SDL_render_gl.c:    if (!renderer->target) {
+render\opengl\SDL_render_gl.c:    SDL_GL_SwapWindow(renderer->window);
+render\opengl\SDL_render_gl.c:    GL_RenderData *renderdata = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+render\opengl\SDL_render_gl.c:    renderer->GetOutputSize = GL_GetOutputSize;
+render\opengl\SDL_render_gl.c:    renderer->SupportsBlendMode = GL_SupportsBlendMode;
+render\opengl\SDL_render_gl.c:    renderer->CreateTexture = GL_CreateTexture;
+render\opengl\SDL_render_gl.c:    renderer->UpdateTexture = GL_UpdateTexture;
+render\opengl\SDL_render_gl.c:    renderer->UpdateTextureYUV = GL_UpdateTextureYUV;
+render\opengl\SDL_render_gl.c:    renderer->LockTexture = GL_LockTexture;
+render\opengl\SDL_render_gl.c:    renderer->UnlockTexture = GL_UnlockTexture;
+render\opengl\SDL_render_gl.c:    renderer->SetRenderTarget = GL_SetRenderTarget;
+render\opengl\SDL_render_gl.c:    renderer->QueueSetViewport = GL_QueueSetViewport;
+render\opengl\SDL_render_gl.c:    renderer->QueueSetDrawColor = GL_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+render\opengl\SDL_render_gl.c:    renderer->QueueDrawPoints = GL_QueueDrawPoints;
+render\opengl\SDL_render_gl.c:    renderer->QueueDrawLines = GL_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+render\opengl\SDL_render_gl.c:    renderer->QueueFillRects = GL_QueueFillRects;
+render\opengl\SDL_render_gl.c:    renderer->QueueCopy = GL_QueueCopy;
+render\opengl\SDL_render_gl.c:    renderer->QueueCopyEx = GL_QueueCopyEx;
+render\opengl\SDL_render_gl.c:    renderer->RunCommandQueue = GL_RunCommandQueue;
+render\opengl\SDL_render_gl.c:    renderer->RenderReadPixels = GL_RenderReadPixels;
+render\opengl\SDL_render_gl.c:    renderer->RenderPresent = GL_RenderPresent;
+render\opengl\SDL_render_gl.c:    renderer->DestroyTexture = GL_DestroyTexture;
+render\opengl\SDL_render_gl.c:    renderer->DestroyRenderer = GL_DestroyRenderer;
+render\opengl\SDL_render_gl.c:    renderer->GL_BindTexture = GL_BindTexture;
+render\opengl\SDL_render_gl.c:    renderer->GL_UnbindTexture = GL_UnbindTexture;
+render\opengl\SDL_render_gl.c:    renderer->info = GL_RenderDriver.info;
+render\opengl\SDL_render_gl.c:    renderer->info.flags = SDL_RENDERER_ACCELERATED;
+render\opengl\SDL_render_gl.c:    renderer->driverdata = data;
+render\opengl\SDL_render_gl.c:    renderer->window = window;
+render\opengl\SDL_render_gl.c:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+render\opengl\SDL_render_gl.c:        renderer->info.max_texture_width = value;
+render\opengl\SDL_render_gl.c:        renderer->info.max_texture_height = value;
+render\opengl\SDL_render_gl.c:        renderer->info.max_texture_width = value;
+render\opengl\SDL_render_gl.c:        renderer->info.max_texture_height = value;
+render\opengl\SDL_render_gl.c:        renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_YV12;
+render\opengl\SDL_render_gl.c:        renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_IYUV;
+render\opengl\SDL_render_gl.c:        renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_NV12;
+render\opengl\SDL_render_gl.c:        renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_NV21;
+render\opengl\SDL_render_gl.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_UYVY;
+render\opengl\SDL_render_gl.c:        renderer->info.flags |= SDL_RENDERER_TARGETTEXTURE;
+render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:        if (SDL_GL_MakeCurrent(renderer->window, data->context) < 0) {
+render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:    SDL_GL_GetDrawableSize(renderer->window, w, h);
+render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:    GLES_RenderData *renderdata = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:        data->fbo = GLES_GetFBO(renderer->driverdata, texture->w, texture->h);
+render\opengles\SDL_render_gles.c:    GLES_RenderData *renderdata = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:    data->drawstate.target = renderer->target;
+render\opengles\SDL_render_gles.c:    if (!renderer->target) {
+render\opengles\SDL_render_gles.c:        SDL_GL_GetDrawableSize(renderer->window, &data->drawstate.drawablew, &data->drawstate.drawableh);
+render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:    Uint32 temp_format = renderer->target ? renderer->target->format : SDL_PIXELFORMAT_ABGR8888;
+render\opengles\SDL_render_gles.c:    data->glReadPixels(rect->x, renderer->target ? rect->y : (h-rect->y)-rect->h,
+render\opengles\SDL_render_gles.c:    if (!renderer->target) {
+render\opengles\SDL_render_gles.c:    SDL_GL_SwapWindow(renderer->window);
+render\opengles\SDL_render_gles.c:    GLES_RenderData *renderdata = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+render\opengles\SDL_render_gles.c:    renderer->WindowEvent = GLES_WindowEvent;
+render\opengles\SDL_render_gles.c:    renderer->GetOutputSize = GLES_GetOutputSize;
+render\opengles\SDL_render_gles.c:    renderer->SupportsBlendMode = GLES_SupportsBlendMode;
+render\opengles\SDL_render_gles.c:    renderer->CreateTexture = GLES_CreateTexture;
+render\opengles\SDL_render_gles.c:    renderer->UpdateTexture = GLES_UpdateTexture;
+render\opengles\SDL_render_gles.c:    renderer->LockTexture = GLES_LockTexture;
+render\opengles\SDL_render_gles.c:    renderer->UnlockTexture = GLES_UnlockTexture;
+render\opengles\SDL_render_gles.c:    renderer->SetRenderTarget = GLES_SetRenderTarget;
+render\opengles\SDL_render_gles.c:    renderer->QueueSetViewport = GLES_QueueSetViewport;
+render\opengles\SDL_render_gles.c:    renderer->QueueSetDrawColor = GLES_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+render\opengles\SDL_render_gles.c:    renderer->QueueDrawPoints = GLES_QueueDrawPoints;
+render\opengles\SDL_render_gles.c:    renderer->QueueDrawLines = GLES_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+render\opengles\SDL_render_gles.c:    renderer->QueueFillRects = GLES_QueueFillRects;
+render\opengles\SDL_render_gles.c:    renderer->QueueCopy = GLES_QueueCopy;
+render\opengles\SDL_render_gles.c:    renderer->QueueCopyEx = GLES_QueueCopyEx;
+render\opengles\SDL_render_gles.c:    renderer->RunCommandQueue = GLES_RunCommandQueue;
+render\opengles\SDL_render_gles.c:    renderer->RenderReadPixels = GLES_RenderReadPixels;
+render\opengles\SDL_render_gles.c:    renderer->RenderPresent = GLES_RenderPresent;
+render\opengles\SDL_render_gles.c:    renderer->DestroyTexture = GLES_DestroyTexture;
+render\opengles\SDL_render_gles.c:    renderer->DestroyRenderer = GLES_DestroyRenderer;
+render\opengles\SDL_render_gles.c:    renderer->GL_BindTexture = GLES_BindTexture;
+render\opengles\SDL_render_gles.c:    renderer->GL_UnbindTexture = GLES_UnbindTexture;
+render\opengles\SDL_render_gles.c:    renderer->info = GLES_RenderDriver.info;
+render\opengles\SDL_render_gles.c:    renderer->info.flags = SDL_RENDERER_ACCELERATED;
+render\opengles\SDL_render_gles.c:    renderer->driverdata = data;
+render\opengles\SDL_render_gles.c:    renderer->window = window;
+render\opengles\SDL_render_gles.c:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+render\opengles\SDL_render_gles.c:    renderer->info.max_texture_width = value;
+render\opengles\SDL_render_gles.c:    renderer->info.max_texture_height = value;
+render\opengles\SDL_render_gles.c:        renderer->info.flags |= SDL_RENDERER_TARGETTEXTURE;
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *) renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *) renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:        if (SDL_GL_MakeCurrent(renderer->window, data->context) < 0) {
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    SDL_GL_GetDrawableSize(renderer->window, w, h);
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *) renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    if (renderer->target) {
+render\opengles2\SDL_render_gles2.c:        if (renderer->target->format != texture->format) {
+render\opengles2\SDL_render_gles2.c:                switch (renderer->target->format) {
+render\opengles2\SDL_render_gles2.c:                switch (renderer->target->format) {
+render\opengles2\SDL_render_gles2.c:                switch (renderer->target->format) {
+render\opengles2\SDL_render_gles2.c:                switch (renderer->target->format) {
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *) renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    const SDL_bool colorswap = (renderer->target && (renderer->target->format == SDL_PIXELFORMAT_ARGB8888 || renderer->target->format == SDL_PIXELFORMAT_RGB888));
+render\opengles2\SDL_render_gles2.c:    data->drawstate.target = renderer->target;
+render\opengles2\SDL_render_gles2.c:        SDL_GL_GetDrawableSize(renderer->window, &data->drawstate.drawablew, &data->drawstate.drawableh);
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *renderdata = (GLES2_RenderData *)renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:       data->fbo = GLES2_GetFBO(renderer->driverdata, texture->w, texture->h);
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *) renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    Uint32 temp_format = renderer->target ? renderer->target->format : SDL_PIXELFORMAT_ABGR8888;
+render\opengles2\SDL_render_gles2.c:    data->glReadPixels(rect->x, renderer->target ? rect->y : (h-rect->y)-rect->h,
+render\opengles2\SDL_render_gles2.c:    if (!renderer->target) {
+render\opengles2\SDL_render_gles2.c:    SDL_GL_SwapWindow(renderer->window);
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+render\opengles2\SDL_render_gles2.c:    renderer->info = GLES2_RenderDriver.info;
+render\opengles2\SDL_render_gles2.c:    renderer->info.flags = (SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
+render\opengles2\SDL_render_gles2.c:    renderer->driverdata = data;
+render\opengles2\SDL_render_gles2.c:    renderer->window = window;
+render\opengles2\SDL_render_gles2.c:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+render\opengles2\SDL_render_gles2.c:    renderer->info.max_texture_width = value;
+render\opengles2\SDL_render_gles2.c:    renderer->info.max_texture_height = value;
+render\opengles2\SDL_render_gles2.c:    renderer->WindowEvent         = GLES2_WindowEvent;
+render\opengles2\SDL_render_gles2.c:    renderer->GetOutputSize       = GLES2_GetOutputSize;
+render\opengles2\SDL_render_gles2.c:    renderer->SupportsBlendMode   = GLES2_SupportsBlendMode;
+render\opengles2\SDL_render_gles2.c:    renderer->CreateTexture       = GLES2_CreateTexture;
+render\opengles2\SDL_render_gles2.c:    renderer->UpdateTexture       = GLES2_UpdateTexture;
+render\opengles2\SDL_render_gles2.c:    renderer->UpdateTextureYUV    = GLES2_UpdateTextureYUV;
+render\opengles2\SDL_render_gles2.c:    renderer->LockTexture         = GLES2_LockTexture;
+render\opengles2\SDL_render_gles2.c:    renderer->UnlockTexture       = GLES2_UnlockTexture;
+render\opengles2\SDL_render_gles2.c:    renderer->SetRenderTarget     = GLES2_SetRenderTarget;
+render\opengles2\SDL_render_gles2.c:    renderer->QueueSetViewport    = GLES2_QueueSetViewport;
+render\opengles2\SDL_render_gles2.c:    renderer->QueueSetDrawColor   = GLES2_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+render\opengles2\SDL_render_gles2.c:    renderer->QueueDrawPoints     = GLES2_QueueDrawPoints;
+render\opengles2\SDL_render_gles2.c:    renderer->QueueDrawLines      = GLES2_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+render\opengles2\SDL_render_gles2.c:    renderer->QueueFillRects      = GLES2_QueueFillRects;
+render\opengles2\SDL_render_gles2.c:    renderer->QueueCopy           = GLES2_QueueCopy;
+render\opengles2\SDL_render_gles2.c:    renderer->QueueCopyEx         = GLES2_QueueCopyEx;
+render\opengles2\SDL_render_gles2.c:    renderer->RunCommandQueue     = GLES2_RunCommandQueue;
+render\opengles2\SDL_render_gles2.c:    renderer->RenderReadPixels    = GLES2_RenderReadPixels;
+render\opengles2\SDL_render_gles2.c:    renderer->RenderPresent       = GLES2_RenderPresent;
+render\opengles2\SDL_render_gles2.c:    renderer->DestroyTexture      = GLES2_DestroyTexture;
+render\opengles2\SDL_render_gles2.c:    renderer->DestroyRenderer     = GLES2_DestroyRenderer;
+render\opengles2\SDL_render_gles2.c:    renderer->GL_BindTexture      = GLES2_BindTexture;
+render\opengles2\SDL_render_gles2.c:    renderer->GL_UnbindTexture    = GLES2_UnbindTexture;
+render\opengles2\SDL_render_gles2.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_YV12;
+render\opengles2\SDL_render_gles2.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_IYUV;
+render\opengles2\SDL_render_gles2.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_NV12;
+render\opengles2\SDL_render_gles2.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_NV21;
+render\opengles2\SDL_render_gles2.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_EXTERNAL_OES;
+render\psp\SDL_render_psp.c:    PSP_RenderData *data = (PSP_RenderData *) renderer->driverdata;
+render\psp\SDL_render_psp.c:/*      PSP_RenderData *renderdata = (PSP_RenderData *) renderer->driverdata; */
+render\psp\SDL_render_psp.c:    PSP_RenderData *data = (PSP_RenderData *) renderer->driverdata;
+render\psp\SDL_render_psp.c:    PSP_RenderData *data = (PSP_RenderData *) renderer->driverdata;
+render\psp\SDL_render_psp.c:    PSP_RenderData *data = (PSP_RenderData *) renderer->driverdata;
+render\psp\SDL_render_psp.c:    PSP_RenderData *renderdata = (PSP_RenderData *) renderer->driverdata;
+render\psp\SDL_render_psp.c:    PSP_RenderData *data = (PSP_RenderData *) renderer->driverdata;
+render\psp\SDL_render_psp.c:    renderer->WindowEvent = PSP_WindowEvent;
+render\psp\SDL_render_psp.c:    renderer->CreateTexture = PSP_CreateTexture;
+render\psp\SDL_render_psp.c:    renderer->SetTextureColorMod = PSP_SetTextureColorMod;
+render\psp\SDL_render_psp.c:    renderer->UpdateTexture = PSP_UpdateTexture;
+render\psp\SDL_render_psp.c:    renderer->LockTexture = PSP_LockTexture;
+render\psp\SDL_render_psp.c:    renderer->UnlockTexture = PSP_UnlockTexture;
+render\psp\SDL_render_psp.c:    renderer->SetRenderTarget = PSP_SetRenderTarget;
+render\psp\SDL_render_psp.c:    renderer->QueueSetViewport = PSP_QueueSetViewport;
+render\psp\SDL_render_psp.c:    renderer->QueueSetDrawColor = PSP_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+render\psp\SDL_render_psp.c:    renderer->QueueDrawPoints = PSP_QueueDrawPoints;
+render\psp\SDL_render_psp.c:    renderer->QueueDrawLines = PSP_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+render\psp\SDL_render_psp.c:    renderer->QueueFillRects = PSP_QueueFillRects;
+render\psp\SDL_render_psp.c:    renderer->QueueCopy = PSP_QueueCopy;
+render\psp\SDL_render_psp.c:    renderer->QueueCopyEx = PSP_QueueCopyEx;
+render\psp\SDL_render_psp.c:    renderer->RunCommandQueue = PSP_RunCommandQueue;
+render\psp\SDL_render_psp.c:    renderer->RenderReadPixels = PSP_RenderReadPixels;
+render\psp\SDL_render_psp.c:    renderer->RenderPresent = PSP_RenderPresent;
+render\psp\SDL_render_psp.c:    renderer->DestroyTexture = PSP_DestroyTexture;
+render\psp\SDL_render_psp.c:    renderer->DestroyRenderer = PSP_DestroyRenderer;
+render\psp\SDL_render_psp.c:    renderer->info = PSP_RenderDriver.info;
+render\psp\SDL_render_psp.c:    renderer->info.flags = (SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
+render\psp\SDL_render_psp.c:    renderer->driverdata = data;
+render\psp\SDL_render_psp.c:    renderer->window = window;
+render\SDL_render.c:    SDL_assert(renderer && renderer->magic == &renderer_magic); \
+render\SDL_render.c:    if (!renderer || renderer->magic != &renderer_magic) { \
+render\SDL_render.c:    SDL_AllocVertGap *prevgap = &renderer->vertex_data_gaps;
+render\SDL_render.c:    SDL_assert((renderer->render_commands == NULL) == (renderer->render_commands_tail == NULL));
+render\SDL_render.c:    if (renderer->render_commands == NULL) {  /* nothing to do! */
+render\SDL_render.c:        SDL_assert(renderer->vertex_data_used == 0);
+render\SDL_render.c:    DebugLogRenderCommands(renderer->render_commands);
+render\SDL_render.c:    retval = renderer->RunCommandQueue(renderer, renderer->render_commands, renderer->vertex_data, renderer->vertex_data_used);
+render\SDL_render.c:    prevgap->next = renderer->vertex_data_gaps_pool;
+render\SDL_render.c:    renderer->vertex_data_gaps_pool = renderer->vertex_data_gaps.next;
+render\SDL_render.c:    renderer->vertex_data_gaps.next = NULL;
+render\SDL_render.c:    if (renderer->render_commands_tail != NULL) {
+render\SDL_render.c:        renderer->render_commands_tail->next = renderer->render_commands_pool;
+render\SDL_render.c:        renderer->render_commands_pool = renderer->render_commands;
+render\SDL_render.c:        renderer->render_commands_tail = NULL;
+render\SDL_render.c:        renderer->render_commands = NULL;
+render\SDL_render.c:    renderer->vertex_data_used = 0;
+render\SDL_render.c:    renderer->render_command_generation++;
+render\SDL_render.c:    renderer->color_queued = SDL_FALSE;
+render\SDL_render.c:    renderer->viewport_queued = SDL_FALSE;
+render\SDL_render.c:    renderer->cliprect_queued = SDL_FALSE;
+render\SDL_render.c:    if (texture->last_command_generation == renderer->render_command_generation) {
+render\SDL_render.c:    return renderer->batching ? 0 : FlushRenderCommands(renderer);
+render\SDL_render.c:    SDL_AllocVertGap *retval = renderer->vertex_data_gaps_pool;
+render\SDL_render.c:        renderer->vertex_data_gaps_pool = retval->next;
+render\SDL_render.c:    const size_t needed = renderer->vertex_data_used + numbytes + alignment;
+render\SDL_render.c:    SDL_AllocVertGap *prevgap = &renderer->vertex_data_gaps;
+render\SDL_render.c:                gap->next = renderer->vertex_data_gaps_pool;
+render\SDL_render.c:                renderer->vertex_data_gaps_pool = gap;
+render\SDL_render.c:            return ((Uint8 *) renderer->vertex_data) + aligned;
+render\SDL_render.c:    while (needed > renderer->vertex_data_allocation) {
+render\SDL_render.c:        const size_t current_allocation = renderer->vertex_data ? renderer->vertex_data_allocation : 1024;
+render\SDL_render.c:        void *ptr = SDL_realloc(renderer->vertex_data, newsize);
+render\SDL_render.c:        renderer->vertex_data = ptr;
+render\SDL_render.c:        renderer->vertex_data_allocation = newsize;
+render\SDL_render.c:    aligner = (alignment && ((renderer->vertex_data_used % alignment) != 0)) ? (alignment - (renderer->vertex_data_used % alignment)) : 0;
+render\SDL_render.c:    aligned = renderer->vertex_data_used + aligner;
+render\SDL_render.c:    retval = ((Uint8 *) renderer->vertex_data) + aligned;
+render\SDL_render.c:            newgap->offset = renderer->vertex_data_used;
+render\SDL_render.c:    renderer->vertex_data_used += aligner + numbytes;
+render\SDL_render.c:    retval = renderer->render_commands_pool;
+render\SDL_render.c:        renderer->render_commands_pool = retval->next;
+render\SDL_render.c:    SDL_assert((renderer->render_commands == NULL) == (renderer->render_commands_tail == NULL));
+render\SDL_render.c:    if (renderer->render_commands_tail != NULL) {
+render\SDL_render.c:        renderer->render_commands_tail->next = retval;
+render\SDL_render.c:        renderer->render_commands = retval;
+render\SDL_render.c:    renderer->render_commands_tail = retval;
+render\SDL_render.c:    if (!renderer->viewport_queued || (SDL_memcmp(&renderer->viewport, &renderer->last_queued_viewport, sizeof (SDL_Rect)) != 0)) {
+render\SDL_render.c:            SDL_memcpy(&cmd->data.viewport.rect, &renderer->viewport, sizeof (renderer->viewport));
+render\SDL_render.c:            retval = renderer->QueueSetViewport(renderer, cmd);
+render\SDL_render.c:                SDL_memcpy(&renderer->last_queued_viewport, &renderer->viewport, sizeof (SDL_Rect));
+render\SDL_render.c:                renderer->viewport_queued = SDL_TRUE;
+render\SDL_render.c:    if ((!renderer->cliprect_queued) ||
+render\SDL_render.c:         (renderer->clipping_enabled != renderer->last_queued_cliprect_enabled) ||
+render\SDL_render.c:         (SDL_memcmp(&renderer->clip_rect, &renderer->last_queued_cliprect, sizeof (SDL_Rect)) != 0)) {
+render\SDL_render.c:            cmd->data.cliprect.enabled = renderer->clipping_enabled;
+render\SDL_render.c:            SDL_memcpy(&cmd->data.cliprect.rect, &renderer->clip_rect, sizeof (cmd->data.cliprect.rect));
+render\SDL_render.c:            SDL_memcpy(&renderer->last_queued_cliprect, &renderer->clip_rect, sizeof (SDL_Rect));
+render\SDL_render.c:            renderer->last_queued_cliprect_enabled = renderer->clipping_enabled;
+render\SDL_render.c:            renderer->cliprect_queued = SDL_TRUE;
+render\SDL_render.c:    if (!renderer->color_queued || (color != renderer->last_queued_color)) {
+render\SDL_render.c:            retval = renderer->QueueSetDrawColor(renderer, cmd);
+render\SDL_render.c:                renderer->last_queued_color = color;
+render\SDL_render.c:                renderer->color_queued = SDL_TRUE;
+render\SDL_render.c:    cmd->data.color.r = renderer->r;
+render\SDL_render.c:    cmd->data.color.g = renderer->g;
+render\SDL_render.c:    cmd->data.color.b = renderer->b;
+render\SDL_render.c:    cmd->data.color.a = renderer->a;
+render\SDL_render.c:    if (PrepQueueCmdDraw(renderer, renderer->r, renderer->g, renderer->b, renderer->a) == 0) {
+render\SDL_render.c:            cmd->data.draw.r = renderer->r;
+render\SDL_render.c:            cmd->data.draw.g = renderer->g;
+render\SDL_render.c:            cmd->data.draw.b = renderer->b;
+render\SDL_render.c:            cmd->data.draw.a = renderer->a;
+render\SDL_render.c:            cmd->data.draw.blend = renderer->blendMode;
+render\SDL_render.c:        retval = renderer->QueueDrawPoints(renderer, cmd, points, count);
+render\SDL_render.c:        retval = renderer->QueueDrawLines(renderer, cmd, points, count);
+render\SDL_render.c:        retval = renderer->QueueFillRects(renderer, cmd, rects, count);
+render\SDL_render.c:        retval = renderer->QueueCopy(renderer, cmd, texture, srcrect, dstrect);
+render\SDL_render.c:    SDL_assert(renderer->QueueCopyEx != NULL);  /* should have caught at higher level. */
+render\SDL_render.c:        retval = renderer->QueueCopyEx(renderer, cmd, texture, srcquad, dstrect, angle, center, flip);
+render\SDL_render.c:    SDL_LockMutex(renderer->target_mutex);
+render\SDL_render.c:    *logical_w = renderer->target ? renderer->logical_w_backup : renderer->logical_w;
+render\SDL_render.c:    *logical_h = renderer->target ? renderer->logical_h_backup : renderer->logical_h;
+render\SDL_render.c:    *viewport = renderer->target ? renderer->viewport_backup : renderer->viewport;
+render\SDL_render.c:    *scale = renderer->target ? renderer->scale_backup : renderer->scale;
+render\SDL_render.c:    SDL_UnlockMutex(renderer->target_mutex);
+render\SDL_render.c:        if (window == renderer->window) {
+render\SDL_render.c:            if (renderer->WindowEvent) {
+render\SDL_render.c:                renderer->WindowEvent(renderer, &event->window);
+render\SDL_render.c:                if (renderer->logical_w) {
+render\SDL_render.c:                    if (renderer->GetOutputSize) {
+render\SDL_render.c:                        renderer->GetOutputSize(renderer, &w, &h);
+render\SDL_render.c:                        SDL_GetWindowSize(renderer->window, &w, &h);
+render\SDL_render.c:                    if (renderer->target) {
+render\SDL_render.c:                        renderer->viewport_backup.x = 0;
+render\SDL_render.c:                        renderer->viewport_backup.y = 0;
+render\SDL_render.c:                        renderer->viewport_backup.w = w;
+render\SDL_render.c:                        renderer->viewport_backup.h = h;
+render\SDL_render.c:                        renderer->viewport.x = 0;
+render\SDL_render.c:                        renderer->viewport.y = 0;
+render\SDL_render.c:                        renderer->viewport.w = w;
+render\SDL_render.c:                        renderer->viewport.h = h;
+render\SDL_render.c:                renderer->hidden = SDL_TRUE;
+render\SDL_render.c:                    renderer->hidden = SDL_FALSE;
+render\SDL_render.c:                renderer->hidden = SDL_TRUE;
+render\SDL_render.c:                    renderer->hidden = SDL_FALSE;
+render\SDL_render.c:        if (window == renderer->window) {
+render\SDL_render.c:                event->motion.x -= (int)(viewport.x * renderer->dpi_scale.x);
+render\SDL_render.c:                event->motion.y -= (int)(viewport.y * renderer->dpi_scale.y);
+render\SDL_render.c:                event->motion.x = (int)(event->motion.x / (scale.x * renderer->dpi_scale.x));
+render\SDL_render.c:                event->motion.y = (int)(event->motion.y / (scale.y * renderer->dpi_scale.y));
+render\SDL_render.c:                    event->motion.xrel = SDL_max(1, (int)(event->motion.xrel / (scale.x * renderer->dpi_scale.x)));
+render\SDL_render.c:                    event->motion.xrel = SDL_min(-1, (int)(event->motion.xrel / (scale.x * renderer->dpi_scale.x)));
+render\SDL_render.c:                    event->motion.yrel = SDL_max(1, (int)(event->motion.yrel / (scale.y * renderer->dpi_scale.y)));
+render\SDL_render.c:                    event->motion.yrel = SDL_min(-1, (int)(event->motion.yrel / (scale.y * renderer->dpi_scale.y)));
+render\SDL_render.c:        if (window == renderer->window) {
+render\SDL_render.c:                event->button.x -= (int)(viewport.x * renderer->dpi_scale.x);
+render\SDL_render.c:                event->button.y -= (int)(viewport.y * renderer->dpi_scale.y);
+render\SDL_render.c:                event->button.x = (int)(event->button.x / (scale.x * renderer->dpi_scale.x));
+render\SDL_render.c:                event->button.y = (int)(event->button.y / (scale.y * renderer->dpi_scale.y));
+render\SDL_render.c:            event->tfinger.x -= (viewport.x * renderer->dpi_scale.x);
+render\SDL_render.c:            event->tfinger.y -= (viewport.y * renderer->dpi_scale.y);
+render\SDL_render.c:            event->tfinger.x = (event->tfinger.x / (scale.x * renderer->dpi_scale.x));
+render\SDL_render.c:            event->tfinger.y = (event->tfinger.y / (scale.y * renderer->dpi_scale.y));
+render\SDL_render.c:    SDL_assert(renderer->QueueSetViewport != NULL);
+render\SDL_render.c:    SDL_assert(renderer->QueueSetDrawColor != NULL);
+render\SDL_render.c:    SDL_assert(renderer->QueueDrawPoints != NULL);
+render\SDL_render.c:    SDL_assert(renderer->QueueDrawLines != NULL);
+render\SDL_render.c:    SDL_assert(renderer->QueueFillRects != NULL);
+render\SDL_render.c:    SDL_assert(renderer->QueueCopy != NULL);
+render\SDL_render.c:    SDL_assert(renderer->RunCommandQueue != NULL);
+render\SDL_render.c:    if (renderer->always_batch) {
+render\SDL_render.c:    renderer->batching = batching;
+render\SDL_render.c:    renderer->magic = &renderer_magic;
+render\SDL_render.c:    renderer->window = window;
+render\SDL_render.c:    renderer->target_mutex = SDL_CreateMutex();
+render\SDL_render.c:    renderer->scale.x = 1.0f;
+render\SDL_render.c:    renderer->scale.y = 1.0f;
+render\SDL_render.c:    renderer->dpi_scale.x = 1.0f;
+render\SDL_render.c:    renderer->dpi_scale.y = 1.0f;
+render\SDL_render.c:    renderer->render_command_generation = 1;
+render\SDL_render.c:    if (window && renderer->GetOutputSize) {
+render\SDL_render.c:        if (renderer->GetOutputSize(renderer, &output_w, &output_h) == 0) {
+render\SDL_render.c:            SDL_GetWindowSize(renderer->window, &window_w, &window_h);
+render\SDL_render.c:            renderer->dpi_scale.x = (float)window_w / output_w;
+render\SDL_render.c:            renderer->dpi_scale.y = (float)window_h / output_h;
+render\SDL_render.c:        renderer->hidden = SDL_TRUE;
+render\SDL_render.c:        renderer->hidden = SDL_FALSE;
+render\SDL_render.c:                "Created renderer: %s", renderer->info.name);
+render\SDL_render.c:        renderer->magic = &renderer_magic;
+render\SDL_render.c:        renderer->target_mutex = SDL_CreateMutex();
+render\SDL_render.c:        renderer->scale.x = 1.0f;
+render\SDL_render.c:        renderer->scale.y = 1.0f;
+render\SDL_render.c:        renderer->render_command_generation = 1;
+render\SDL_render.c:    *info = renderer->info;
+render\SDL_render.c:    if (renderer->target) {
+render\SDL_render.c:        return SDL_QueryTexture(renderer->target, NULL, NULL, w, h);
+render\SDL_render.c:    } else if (renderer->GetOutputSize) {
+render\SDL_render.c:        return renderer->GetOutputSize(renderer, w, h);
+render\SDL_render.c:    } else if (renderer->window) {
+render\SDL_render.c:        SDL_GetWindowSize(renderer->window, w, h);
+render\SDL_render.c:        return renderer->SupportsBlendMode && renderer->SupportsBlendMode(renderer, blendMode);
+render\SDL_render.c:    for (i = 0; i < renderer->info.num_texture_formats; ++i) {
+render\SDL_render.c:        if (renderer->info.texture_formats[i] == format) {
+render\SDL_render.c:        for (i = 0; i < renderer->info.num_texture_formats; ++i) {
+render\SDL_render.c:            if (renderer->info.texture_formats[i] == format) {
+render\SDL_render.c:                return renderer->info.texture_formats[i];
+render\SDL_render.c:        for (i = 0; i < renderer->info.num_texture_formats; ++i) {
+render\SDL_render.c:            if (!SDL_ISPIXELFORMAT_FOURCC(renderer->info.texture_formats[i]) &&
+render\SDL_render.c:                SDL_ISPIXELFORMAT_ALPHA(renderer->info.texture_formats[i]) == hasAlpha) {
+render\SDL_render.c:                return renderer->info.texture_formats[i];
+render\SDL_render.c:    return renderer->info.texture_formats[0];
+render\SDL_render.c:        format = renderer->info.texture_formats[0];
+render\SDL_render.c:    if ((renderer->info.max_texture_width && w > renderer->info.max_texture_width) ||
+render\SDL_render.c:        (renderer->info.max_texture_height && h > renderer->info.max_texture_height)) {
+render\SDL_render.c:        SDL_SetError("Texture dimensions are limited to %dx%d", renderer->info.max_texture_width, renderer->info.max_texture_height);
+render\SDL_render.c:    texture->next = renderer->textures;
+render\SDL_render.c:    if (renderer->textures) {
+render\SDL_render.c:        renderer->textures->prev = texture;
+render\SDL_render.c:    renderer->textures = texture;
+render\SDL_render.c:        if (renderer->CreateTexture(renderer, texture) < 0) {
+render\SDL_render.c:        renderer->textures = texture;
+render\SDL_render.c:            for (i = 0; i < (int)renderer->info.num_texture_formats; ++i) {
+render\SDL_render.c:                if (renderer->info.texture_formats[i] == SDL_PIXELFORMAT_ARGB8888) {
+render\SDL_render.c:            for (i = 0; i < (int)renderer->info.num_texture_formats; ++i) {
+render\SDL_render.c:                if (renderer->info.texture_formats[i] == SDL_PIXELFORMAT_ABGR8888) {
+render\SDL_render.c:        for (i = 0; i < (int)renderer->info.num_texture_formats; ++i) {
+render\SDL_render.c:            if (renderer->info.texture_formats[i] == fmt->format) {
+render\SDL_render.c:        format = renderer->info.texture_formats[0];
+render\SDL_render.c:        for (i = 0; i < (int)renderer->info.num_texture_formats; ++i) {
+render\SDL_render.c:            if (!SDL_ISPIXELFORMAT_FOURCC(renderer->info.texture_formats[i]) &&
+render\SDL_render.c:                    SDL_ISPIXELFORMAT_ALPHA(renderer->info.texture_formats[i]) == needAlpha) {
+render\SDL_render.c:                format = renderer->info.texture_formats[i];
+render\SDL_render.c:        return renderer->UpdateTexture(renderer, texture, rect, pixels, pitch);
+render\SDL_render.c:        SDL_assert(renderer->UpdateTextureYUV);
+render\SDL_render.c:        if (renderer->UpdateTextureYUV) {
+render\SDL_render.c:            return renderer->UpdateTextureYUV(renderer, texture, rect, Yplane, Ypitch, Uplane, Upitch, Vplane, Vpitch);
+render\SDL_render.c:        return renderer->LockTexture(renderer, texture, rect, pixels, pitch);
+render\SDL_render.c:        renderer->UnlockTexture(renderer, texture);
+render\SDL_render.c:    if (!renderer || !renderer->SetRenderTarget) {
+render\SDL_render.c:    return (renderer->info.flags & SDL_RENDERER_TARGETTEXTURE) != 0;
+render\SDL_render.c:    if (texture == renderer->target) {
+render\SDL_render.c:    SDL_LockMutex(renderer->target_mutex);
+render\SDL_render.c:    if (texture && !renderer->target) {
+render\SDL_render.c:        renderer->viewport_backup = renderer->viewport;
+render\SDL_render.c:        renderer->clip_rect_backup = renderer->clip_rect;
+render\SDL_render.c:        renderer->clipping_enabled_backup = renderer->clipping_enabled;
+render\SDL_render.c:        renderer->scale_backup = renderer->scale;
+render\SDL_render.c:        renderer->logical_w_backup = renderer->logical_w;
+render\SDL_render.c:        renderer->logical_h_backup = renderer->logical_h;
+render\SDL_render.c:    renderer->target = texture;
+render\SDL_render.c:    if (renderer->SetRenderTarget(renderer, texture) < 0) {
+render\SDL_render.c:        SDL_UnlockMutex(renderer->target_mutex);
+render\SDL_render.c:        renderer->viewport.x = 0;
+render\SDL_render.c:        renderer->viewport.y = 0;
+render\SDL_render.c:        renderer->viewport.w = texture->w;
+render\SDL_render.c:        renderer->viewport.h = texture->h;
+render\SDL_render.c:        SDL_zero(renderer->clip_rect);
+render\SDL_render.c:        renderer->clipping_enabled = SDL_FALSE;
+render\SDL_render.c:        renderer->scale.x = 1.0f;
+render\SDL_render.c:        renderer->scale.y = 1.0f;
+render\SDL_render.c:        renderer->logical_w = texture->w;
+render\SDL_render.c:        renderer->logical_h = texture->h;
+render\SDL_render.c:        renderer->viewport = renderer->viewport_backup;
+render\SDL_render.c:        renderer->clip_rect = renderer->clip_rect_backup;
+render\SDL_render.c:        renderer->clipping_enabled = renderer->clipping_enabled_backup;
+render\SDL_render.c:        renderer->scale = renderer->scale_backup;
+render\SDL_render.c:        renderer->logical_w = renderer->logical_w_backup;
+render\SDL_render.c:        renderer->logical_h = renderer->logical_h_backup;
+render\SDL_render.c:    SDL_UnlockMutex(renderer->target_mutex);
+render\SDL_render.c:    return renderer->target;
+render\SDL_render.c:    if (!renderer->logical_w || !renderer->logical_h) {
+render\SDL_render.c:    want_aspect = (float)renderer->logical_w / renderer->logical_h;
+render\SDL_render.c:    if (renderer->integer_scale) {
+render\SDL_render.c:            scale = (float)(w / renderer->logical_w);
+render\SDL_render.c:            scale = (float)(h / renderer->logical_h);
+render\SDL_render.c:        viewport.w = (int)SDL_ceil(renderer->logical_w * scale);
+render\SDL_render.c:        viewport.h = (int)SDL_ceil(renderer->logical_h * scale);
+render\SDL_render.c:        scale = (float)w / renderer->logical_w;
+render\SDL_render.c:            scale = (float)h / renderer->logical_h;
+render\SDL_render.c:            viewport.w = (int)SDL_ceil(renderer->logical_w * scale);
+render\SDL_render.c:            scale = (float)w / renderer->logical_w;
+render\SDL_render.c:            viewport.h = (int)SDL_ceil(renderer->logical_h * scale);
+render\SDL_render.c:            scale = (float)w / renderer->logical_w;
+render\SDL_render.c:            viewport.h = (int)SDL_ceil(renderer->logical_h * scale);
+render\SDL_render.c:             scale = (float)h / renderer->logical_h;
+render\SDL_render.c:             viewport.w = (int)SDL_ceil(renderer->logical_w * scale);
+render\SDL_render.c:        renderer->logical_w = 0;
+render\SDL_render.c:        renderer->logical_h = 0;
+render\SDL_render.c:    renderer->logical_w = w;
+render\SDL_render.c:    renderer->logical_h = h;
+render\SDL_render.c:        *w = renderer->logical_w;
+render\SDL_render.c:        *h = renderer->logical_h;
+render\SDL_render.c:    renderer->integer_scale = enable;
+render\SDL_render.c:    return renderer->integer_scale;
+render\SDL_render.c:        renderer->viewport.x = (int)SDL_floor(rect->x * renderer->scale.x);
+render\SDL_render.c:        renderer->viewport.y = (int)SDL_floor(rect->y * renderer->scale.y);
+render\SDL_render.c:        renderer->viewport.w = (int)SDL_ceil(rect->w * renderer->scale.x);
+render\SDL_render.c:        renderer->viewport.h = (int)SDL_ceil(rect->h * renderer->scale.y);
+render\SDL_render.c:        renderer->viewport.x = 0;
+render\SDL_render.c:        renderer->viewport.y = 0;
+render\SDL_render.c:        if (SDL_GetRendererOutputSize(renderer, &renderer->viewport.w, &renderer->viewport.h) < 0) {
+render\SDL_render.c:        rect->x = (int)(renderer->viewport.x / renderer->scale.x);
+render\SDL_render.c:        rect->y = (int)(renderer->viewport.y / renderer->scale.y);
+render\SDL_render.c:        rect->w = (int)(renderer->viewport.w / renderer->scale.x);
+render\SDL_render.c:        rect->h = (int)(renderer->viewport.h / renderer->scale.y);
+render\SDL_render.c:        renderer->clipping_enabled = SDL_TRUE;
+render\SDL_render.c:        renderer->clip_rect.x = (int)SDL_floor(rect->x * renderer->scale.x);
+render\SDL_render.c:        renderer->clip_rect.y = (int)SDL_floor(rect->y * renderer->scale.y);
+render\SDL_render.c:        renderer->clip_rect.w = (int)SDL_ceil(rect->w * renderer->scale.x);
+render\SDL_render.c:        renderer->clip_rect.h = (int)SDL_ceil(rect->h * renderer->scale.y);
+render\SDL_render.c:        renderer->clipping_enabled = SDL_FALSE;
+render\SDL_render.c:        SDL_zero(renderer->clip_rect);
+render\SDL_render.c:        rect->x = (int)(renderer->clip_rect.x / renderer->scale.x);
+render\SDL_render.c:        rect->y = (int)(renderer->clip_rect.y / renderer->scale.y);
+render\SDL_render.c:        rect->w = (int)(renderer->clip_rect.w / renderer->scale.x);
+render\SDL_render.c:        rect->h = (int)(renderer->clip_rect.h / renderer->scale.y);
+render\SDL_render.c:    return renderer->clipping_enabled;
+render\SDL_render.c:    renderer->scale.x = scaleX;
+render\SDL_render.c:    renderer->scale.y = scaleY;
+render\SDL_render.c:        *scaleX = renderer->scale.x;
+render\SDL_render.c:        *scaleY = renderer->scale.y;
+render\SDL_render.c:    renderer->r = r;
+render\SDL_render.c:    renderer->g = g;
+render\SDL_render.c:    renderer->b = b;
+render\SDL_render.c:    renderer->a = a;
+render\SDL_render.c:        *r = renderer->r;
+render\SDL_render.c:        *g = renderer->g;
+render\SDL_render.c:        *b = renderer->b;
+render\SDL_render.c:        *a = renderer->a;
+render\SDL_render.c:    renderer->blendMode = blendMode;
+render\SDL_render.c:    *blendMode = renderer->blendMode;
+render\SDL_render.c:        frects[i].x = points[i].x * renderer->scale.x;
+render\SDL_render.c:        frects[i].y = points[i].y * renderer->scale.y;
+render\SDL_render.c:        frects[i].w = renderer->scale.x;
+render\SDL_render.c:        frects[i].h = renderer->scale.y;
+render\SDL_render.c:    if (renderer->hidden) {
+render\SDL_render.c:    if (renderer->scale.x != 1.0f || renderer->scale.y != 1.0f) {
+render\SDL_render.c:        fpoints[i].x = points[i].x * renderer->scale.x;
+render\SDL_render.c:        fpoints[i].y = points[i].y * renderer->scale.y;
+render\SDL_render.c:        frects[i].x = fpoints[i].x * renderer->scale.x;
+render\SDL_render.c:        frects[i].y = fpoints[i].y * renderer->scale.y;
+render\SDL_render.c:        frects[i].w = renderer->scale.x;
+render\SDL_render.c:        frects[i].h = renderer->scale.y;
+render\SDL_render.c:    if (renderer->hidden) {
+render\SDL_render.c:    if (renderer->scale.x != 1.0f || renderer->scale.y != 1.0f) {
+render\SDL_render.c:        fpoints[i].x = points[i].x * renderer->scale.x;
+render\SDL_render.c:        fpoints[i].y = points[i].y * renderer->scale.y;
+render\SDL_render.c:            frect->x = points[i].x * renderer->scale.x;
+render\SDL_render.c:            frect->y = minY * renderer->scale.y;
+render\SDL_render.c:            frect->w = renderer->scale.x;
+render\SDL_render.c:            frect->h = (maxY - minY + 1) * renderer->scale.y;
+render\SDL_render.c:            frect->x = minX * renderer->scale.x;
+render\SDL_render.c:            frect->y = points[i].y * renderer->scale.y;
+render\SDL_render.c:            frect->w = (maxX - minX + 1) * renderer->scale.x;
+render\SDL_render.c:            frect->h = renderer->scale.y;
+render\SDL_render.c:            fpoints[0].x = points[i].x * renderer->scale.x;
+render\SDL_render.c:            fpoints[0].y = points[i].y * renderer->scale.y;
+render\SDL_render.c:            fpoints[1].x = points[i+1].x * renderer->scale.x;
+render\SDL_render.c:            fpoints[1].y = points[i+1].y * renderer->scale.y;
+render\SDL_render.c:            frect->x = points[i].x * renderer->scale.x;
+render\SDL_render.c:            frect->y = minY * renderer->scale.y;
+render\SDL_render.c:            frect->w = renderer->scale.x;
+render\SDL_render.c:            frect->h = (maxY - minY + 1) * renderer->scale.y;
+render\SDL_render.c:            frect->x = minX * renderer->scale.x;
+render\SDL_render.c:            frect->y = points[i].y * renderer->scale.y;
+render\SDL_render.c:            frect->w = (maxX - minX + 1) * renderer->scale.x;
+render\SDL_render.c:            frect->h = renderer->scale.y;
+render\SDL_render.c:            fpoints[0].x = points[i].x * renderer->scale.x;
+render\SDL_render.c:            fpoints[0].y = points[i].y * renderer->scale.y;
+render\SDL_render.c:            fpoints[1].x = points[i+1].x * renderer->scale.x;
+render\SDL_render.c:            fpoints[1].y = points[i+1].y * renderer->scale.y;
+render\SDL_render.c:    if (renderer->hidden) {
+render\SDL_render.c:    if (renderer->scale.x != 1.0f || renderer->scale.y != 1.0f) {
+render\SDL_render.c:        fpoints[i].x = points[i].x * renderer->scale.x;
+render\SDL_render.c:        fpoints[i].y = points[i].y * renderer->scale.y;
+render\SDL_render.c:    if (renderer->hidden) {
+render\SDL_render.c:    if (renderer->scale.x != 1.0f || renderer->scale.y != 1.0f) {
+render\SDL_render.c:        fpoints[i].x = points[i].x * renderer->scale.x;
+render\SDL_render.c:        fpoints[i].y = points[i].y * renderer->scale.y;
+render\SDL_render.c:    if (renderer->hidden) {
+render\SDL_render.c:    if (renderer->hidden) {
+render\SDL_render.c:    if (renderer->hidden) {
+render\SDL_render.c:        frects[i].x = rects[i].x * renderer->scale.x;
+render\SDL_render.c:        frects[i].y = rects[i].y * renderer->scale.y;
+render\SDL_render.c:        frects[i].w = rects[i].w * renderer->scale.x;
+render\SDL_render.c:        frects[i].h = rects[i].h * renderer->scale.y;
+render\SDL_render.c:    if (renderer->hidden) {
+render\SDL_render.c:        frects[i].x = rects[i].x * renderer->scale.x;
+render\SDL_render.c:        frects[i].y = rects[i].y * renderer->scale.y;
+render\SDL_render.c:        frects[i].w = rects[i].w * renderer->scale.x;
+render\SDL_render.c:        frects[i].h = rects[i].h * renderer->scale.y;
+render\SDL_render.c:    if (renderer->hidden) {
+render\SDL_render.c:    real_dstrect.x *= renderer->scale.x;
+render\SDL_render.c:    real_dstrect.y *= renderer->scale.y;
+render\SDL_render.c:    real_dstrect.w *= renderer->scale.x;
+render\SDL_render.c:    real_dstrect.h *= renderer->scale.y;
+render\SDL_render.c:    texture->last_command_generation = renderer->render_command_generation;
+render\SDL_render.c:    if (!renderer->QueueCopyEx) {
+render\SDL_render.c:    if (renderer->hidden) {
+render\SDL_render.c:    real_dstrect.x *= renderer->scale.x;
+render\SDL_render.c:    real_dstrect.y *= renderer->scale.y;
+render\SDL_render.c:    real_dstrect.w *= renderer->scale.x;
+render\SDL_render.c:    real_dstrect.h *= renderer->scale.y;
+render\SDL_render.c:    real_center.x *= renderer->scale.x;
+render\SDL_render.c:    real_center.y *= renderer->scale.y;
+render\SDL_render.c:    texture->last_command_generation = renderer->render_command_generation;
+render\SDL_render.c:    if (!renderer->RenderReadPixels) {
+render\SDL_render.c:        format = SDL_GetWindowPixelFormat(renderer->window);
+render\SDL_render.c:    real_rect.x = renderer->viewport.x;
+render\SDL_render.c:    real_rect.y = renderer->viewport.y;
+render\SDL_render.c:    real_rect.w = renderer->viewport.w;
+render\SDL_render.c:    real_rect.h = renderer->viewport.h;
+render\SDL_render.c:    return renderer->RenderReadPixels(renderer, &real_rect,
+render\SDL_render.c:    if (renderer->hidden) {
+render\SDL_render.c:    renderer->RenderPresent(renderer);
+render\SDL_render.c:    if (texture == renderer->target) {
+render\SDL_render.c:        renderer->textures = texture->next;
+render\SDL_render.c:    renderer->DestroyTexture(renderer, texture);
+render\SDL_render.c:    if (renderer->render_commands_tail != NULL) {
+render\SDL_render.c:        renderer->render_commands_tail->next = renderer->render_commands_pool;
+render\SDL_render.c:        cmd = renderer->render_commands;
+render\SDL_render.c:        cmd = renderer->render_commands_pool;
+render\SDL_render.c:    renderer->render_commands_pool = NULL;
+render\SDL_render.c:    renderer->render_commands_tail = NULL;
+render\SDL_render.c:    renderer->render_commands = NULL;
+render\SDL_render.c:    SDL_free(renderer->vertex_data);
+render\SDL_render.c:    for (gap = renderer->vertex_data_gaps.next; gap; gap = nextgap) {
+render\SDL_render.c:    for (gap = renderer->vertex_data_gaps_pool; gap; gap = nextgap) {
+render\SDL_render.c:    while (renderer->textures) {
+render\SDL_render.c:        SDL_Texture *tex = renderer->textures; (void) tex;
+render\SDL_render.c:        SDL_DestroyTexture(renderer->textures);
+render\SDL_render.c:        SDL_assert(tex != renderer->textures);  /* satisfy static analysis. */
+render\SDL_render.c:    if (renderer->window) {
+render\SDL_render.c:        SDL_SetWindowData(renderer->window, SDL_WINDOWRENDERDATA, NULL);
+render\SDL_render.c:    renderer->magic = NULL;
+render\SDL_render.c:    SDL_DestroyMutex(renderer->target_mutex);
+render\SDL_render.c:    renderer->target_mutex = NULL;
+render\SDL_render.c:    renderer->DestroyRenderer(renderer);
+render\SDL_render.c:    } else if (renderer && renderer->GL_BindTexture) {
+render\SDL_render.c:        return renderer->GL_BindTexture(renderer, texture, texw, texh);
+render\SDL_render.c:    } else if (renderer && renderer->GL_UnbindTexture) {
+render\SDL_render.c:        return renderer->GL_UnbindTexture(renderer, texture);
+render\SDL_render.c:    if (renderer->GetMetalLayer) {
+render\SDL_render.c:        return renderer->GetMetalLayer(renderer);
+render\SDL_render.c:    if (renderer->GetMetalCommandEncoder) {
+render\SDL_render.c:        return renderer->GetMetalCommandEncoder(renderer);
+render\software\SDL_render_sw.c:    SW_RenderData *data = (SW_RenderData *) renderer->driverdata;
+render\software\SDL_render_sw.c:        SDL_Surface *surface = SDL_GetWindowSurface(renderer->window);
+render\software\SDL_render_sw.c:    SW_RenderData *data = (SW_RenderData *) renderer->driverdata;
+render\software\SDL_render_sw.c:    SW_RenderData *data = (SW_RenderData *) renderer->driverdata;
+render\software\SDL_render_sw.c:    if (renderer->window) {
+render\software\SDL_render_sw.c:        SDL_GetWindowSize(renderer->window, w, h);
+render\software\SDL_render_sw.c:    SW_RenderData *data = (SW_RenderData *) renderer->driverdata;
+render\software\SDL_render_sw.c:    if (renderer->viewport.x || renderer->viewport.y) {
+render\software\SDL_render_sw.c:        const int x = renderer->viewport.x;
+render\software\SDL_render_sw.c:        const int y = renderer->viewport.y;
+render\software\SDL_render_sw.c:    if (renderer->viewport.x || renderer->viewport.y) {
+render\software\SDL_render_sw.c:        const int x = renderer->viewport.x;
+render\software\SDL_render_sw.c:        const int y = renderer->viewport.y;
+render\software\SDL_render_sw.c:    if (renderer->viewport.x || renderer->viewport.y) {
+render\software\SDL_render_sw.c:        verts->x = (int)(renderer->viewport.x + dstrect->x);
+render\software\SDL_render_sw.c:        verts->y = (int)(renderer->viewport.y + dstrect->y);
+render\software\SDL_render_sw.c:    if (renderer->viewport.x || renderer->viewport.y) {
+render\software\SDL_render_sw.c:        verts->dstrect.x = (int)(renderer->viewport.x + dstrect->x);
+render\software\SDL_render_sw.c:        verts->dstrect.y = (int)(renderer->viewport.y + dstrect->y);
+render\software\SDL_render_sw.c:    SDL_Window *window = renderer->window;
+render\software\SDL_render_sw.c:    SW_RenderData *data = (SW_RenderData *) renderer->driverdata;
+render\software\SDL_render_sw.c:    renderer->WindowEvent = SW_WindowEvent;
+render\software\SDL_render_sw.c:    renderer->GetOutputSize = SW_GetOutputSize;
+render\software\SDL_render_sw.c:    renderer->CreateTexture = SW_CreateTexture;
+render\software\SDL_render_sw.c:    renderer->UpdateTexture = SW_UpdateTexture;
+render\software\SDL_render_sw.c:    renderer->LockTexture = SW_LockTexture;
+render\software\SDL_render_sw.c:    renderer->UnlockTexture = SW_UnlockTexture;
+render\software\SDL_render_sw.c:    renderer->SetRenderTarget = SW_SetRenderTarget;
+render\software\SDL_render_sw.c:    renderer->QueueSetViewport = SW_QueueSetViewport;
+render\software\SDL_render_sw.c:    renderer->QueueSetDrawColor = SW_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+render\software\SDL_render_sw.c:    renderer->QueueDrawPoints = SW_QueueDrawPoints;
+render\software\SDL_render_sw.c:    renderer->QueueDrawLines = SW_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+render\software\SDL_render_sw.c:    renderer->QueueFillRects = SW_QueueFillRects;
+render\software\SDL_render_sw.c:    renderer->QueueCopy = SW_QueueCopy;
+render\software\SDL_render_sw.c:    renderer->QueueCopyEx = SW_QueueCopyEx;
+render\software\SDL_render_sw.c:    renderer->RunCommandQueue = SW_RunCommandQueue;
+render\software\SDL_render_sw.c:    renderer->RenderReadPixels = SW_RenderReadPixels;
+render\software\SDL_render_sw.c:    renderer->RenderPresent = SW_RenderPresent;
+render\software\SDL_render_sw.c:    renderer->DestroyTexture = SW_DestroyTexture;
+render\software\SDL_render_sw.c:    renderer->DestroyRenderer = SW_DestroyRenderer;
+render\software\SDL_render_sw.c:    renderer->info = SW_RenderDriver.info;
+render\software\SDL_render_sw.c:    renderer->driverdata = data;
+scale:core\winrt\SDL_winrtapp_direct3d.cpp:            if (renderer && (SDL_strcmp(renderer->info.name, "direct3d11") == 0)) {
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:        SDL_Window *window = renderer->window;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *)renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *)renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *)renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *)renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *)renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    const SDL_bool istarget = renderer->target != NULL;
+scale:render\direct3d\SDL_render_d3d.c:                const int backw = istarget ? renderer->target->w : data->pparams.BackBufferWidth;
+scale:render\direct3d\SDL_render_d3d.c:                const int backh = istarget ? renderer->target->h : data->pparams.BackBufferHeight;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *renderdata = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    for (texture = renderer->textures; texture; texture = texture->next) {
+scale:render\direct3d\SDL_render_d3d.c:    for (texture = renderer->textures; texture; texture = texture->next) {
+scale:render\direct3d\SDL_render_d3d.c:    D3D_SetRenderTargetInternal(renderer, renderer->target);
+scale:render\direct3d\SDL_render_d3d.c:    renderer->WindowEvent = D3D_WindowEvent;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->SupportsBlendMode = D3D_SupportsBlendMode;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->CreateTexture = D3D_CreateTexture;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->UpdateTexture = D3D_UpdateTexture;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->UpdateTextureYUV = D3D_UpdateTextureYUV;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->LockTexture = D3D_LockTexture;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->UnlockTexture = D3D_UnlockTexture;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->SetRenderTarget = D3D_SetRenderTarget;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->QueueSetViewport = D3D_QueueSetViewport;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->QueueSetDrawColor = D3D_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+scale:render\direct3d\SDL_render_d3d.c:    renderer->QueueDrawPoints = D3D_QueueDrawPoints;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->QueueDrawLines = D3D_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+scale:render\direct3d\SDL_render_d3d.c:    renderer->QueueFillRects = D3D_QueueFillRects;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->QueueCopy = D3D_QueueCopy;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->QueueCopyEx = D3D_QueueCopyEx;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->RunCommandQueue = D3D_RunCommandQueue;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->RenderReadPixels = D3D_RenderReadPixels;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->RenderPresent = D3D_RenderPresent;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->DestroyTexture = D3D_DestroyTexture;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->DestroyRenderer = D3D_DestroyRenderer;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->info = D3D_RenderDriver.info;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->info.flags = (SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
+scale:render\direct3d\SDL_render_d3d.c:    renderer->driverdata = data;
+scale:render\direct3d\SDL_render_d3d.c:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->info.max_texture_width = caps.MaxTextureWidth;
+scale:render\direct3d\SDL_render_d3d.c:    renderer->info.max_texture_height = caps.MaxTextureHeight;
+scale:render\direct3d\SDL_render_d3d.c:        renderer->info.flags |= SDL_RENDERER_TARGETTEXTURE;
+scale:render\direct3d\SDL_render_d3d.c:            renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_YV12;
+scale:render\direct3d\SDL_render_d3d.c:            renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_IYUV;
+scale:render\direct3d\SDL_render_d3d.c:    D3D_RenderData *data = (D3D_RenderData *) renderer->driverdata;
+scale:render\direct3d\SDL_render_d3d.c:    if (renderer->DestroyRenderer != D3D_DestroyRenderer) {
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    for (texture = renderer->textures; texture; texture = texture->next) {
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:            renderer->info.max_texture_width = renderer->info.max_texture_height = 16384;
+scale:render\direct3d11\SDL_render_d3d11.c:            renderer->info.max_texture_width = renderer->info.max_texture_height = 8192;
+scale:render\direct3d11\SDL_render_d3d11.c:            renderer->info.max_texture_width = renderer->info.max_texture_height = 4096;
+scale:render\direct3d11\SDL_render_d3d11.c:            renderer->info.max_texture_width = renderer->info.max_texture_height = 2048;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:                outRect->left += renderer->viewport.x;
+scale:render\direct3d11\SDL_render_d3d11.c:                outRect->right += renderer->viewport.x;
+scale:render\direct3d11\SDL_render_d3d11.c:                outRect->top += renderer->viewport.y;
+scale:render\direct3d11\SDL_render_d3d11.c:                outRect->bottom += renderer->viewport.y;
+scale:render\direct3d11\SDL_render_d3d11.c:            outRect->top = renderer->viewport.w - sdlRect->x - sdlRect->w;
+scale:render\direct3d11\SDL_render_d3d11.c:            outRect->bottom = renderer->viewport.w - sdlRect->x;
+scale:render\direct3d11\SDL_render_d3d11.c:            outRect->left = renderer->viewport.w - sdlRect->x - sdlRect->w;
+scale:render\direct3d11\SDL_render_d3d11.c:            outRect->right = renderer->viewport.w - sdlRect->x;
+scale:render\direct3d11\SDL_render_d3d11.c:            outRect->top = renderer->viewport.h - sdlRect->y - sdlRect->h;
+scale:render\direct3d11\SDL_render_d3d11.c:            outRect->bottom = renderer->viewport.h - sdlRect->y;
+scale:render\direct3d11\SDL_render_d3d11.c:            outRect->left = renderer->viewport.h - sdlRect->y - sdlRect->h;
+scale:render\direct3d11\SDL_render_d3d11.c:            outRect->right = renderer->viewport.h - sdlRect->y;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:        SDL_GetWindowWMInfo(renderer->window, &windowinfo);
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    SDL_GetWindowSize(renderer->window, &w, &h);
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *)renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *)renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *)renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *)renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *rendererData = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData * data = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    D3D11_RenderData *data = (D3D11_RenderData *) renderer->driverdata;
+scale:render\direct3d11\SDL_render_d3d11.c:    if (renderer->info.flags & SDL_RENDERER_PRESENTVSYNC) {
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->WindowEvent = D3D11_WindowEvent;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->SupportsBlendMode = D3D11_SupportsBlendMode;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->CreateTexture = D3D11_CreateTexture;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->UpdateTexture = D3D11_UpdateTexture;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->UpdateTextureYUV = D3D11_UpdateTextureYUV;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->LockTexture = D3D11_LockTexture;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->UnlockTexture = D3D11_UnlockTexture;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->SetRenderTarget = D3D11_SetRenderTarget;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->QueueSetViewport = D3D11_QueueSetViewport;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->QueueSetDrawColor = D3D11_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->QueueDrawPoints = D3D11_QueueDrawPoints;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->QueueDrawLines = D3D11_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->QueueFillRects = D3D11_QueueFillRects;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->QueueCopy = D3D11_QueueCopy;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->QueueCopyEx = D3D11_QueueCopyEx;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->RunCommandQueue = D3D11_RunCommandQueue;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->RenderReadPixels = D3D11_RenderReadPixels;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->RenderPresent = D3D11_RenderPresent;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->DestroyTexture = D3D11_DestroyTexture;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->DestroyRenderer = D3D11_DestroyRenderer;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->info = D3D11_RenderDriver.info;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->info.flags = (SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->driverdata = data;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+scale:render\direct3d11\SDL_render_d3d11.c:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+scale:render\direct3d11\SDL_render_d3d11.c:    renderer->window = window;
+scale:render\direct3d11\SDL_render_winrt.cpp:    SDL_Window * sdlWindow = renderer->window;
+scale:render\direct3d11\SDL_render_winrt.cpp:    if ( ! renderer->window ) {
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:        if (renderer->target != NULL) {
+scale:render\metal\SDL_render_metal.m:            METAL_TextureData *texdata = (__bridge METAL_TextureData *)renderer->target->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    if (renderer->driverdata) {
+scale:render\metal\SDL_render_metal.m:        METAL_RenderData *data = CFBridgingRelease(renderer->driverdata);
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    METAL_RenderData *data = (__bridge METAL_RenderData *) renderer->driverdata;
+scale:render\metal\SDL_render_metal.m:    renderer->driverdata = (void*)CFBridgingRetain(data);
+scale:render\metal\SDL_render_metal.m:    renderer->window = window;
+scale:render\metal\SDL_render_metal.m:    renderer->WindowEvent = METAL_WindowEvent;
+scale:render\metal\SDL_render_metal.m:    renderer->GetOutputSize = METAL_GetOutputSize;
+scale:render\metal\SDL_render_metal.m:    renderer->SupportsBlendMode = METAL_SupportsBlendMode;
+scale:render\metal\SDL_render_metal.m:    renderer->CreateTexture = METAL_CreateTexture;
+scale:render\metal\SDL_render_metal.m:    renderer->UpdateTexture = METAL_UpdateTexture;
+scale:render\metal\SDL_render_metal.m:    renderer->UpdateTextureYUV = METAL_UpdateTextureYUV;
+scale:render\metal\SDL_render_metal.m:    renderer->LockTexture = METAL_LockTexture;
+scale:render\metal\SDL_render_metal.m:    renderer->UnlockTexture = METAL_UnlockTexture;
+scale:render\metal\SDL_render_metal.m:    renderer->SetRenderTarget = METAL_SetRenderTarget;
+scale:render\metal\SDL_render_metal.m:    renderer->QueueSetViewport = METAL_QueueSetViewport;
+scale:render\metal\SDL_render_metal.m:    renderer->QueueSetDrawColor = METAL_QueueSetDrawColor;
+scale:render\metal\SDL_render_metal.m:    renderer->QueueDrawPoints = METAL_QueueDrawPoints;
+scale:render\metal\SDL_render_metal.m:    renderer->QueueDrawLines = METAL_QueueDrawPoints;  // lines and points queue the same way.
+scale:render\metal\SDL_render_metal.m:    renderer->QueueFillRects = METAL_QueueFillRects;
+scale:render\metal\SDL_render_metal.m:    renderer->QueueCopy = METAL_QueueCopy;
+scale:render\metal\SDL_render_metal.m:    renderer->QueueCopyEx = METAL_QueueCopyEx;
+scale:render\metal\SDL_render_metal.m:    renderer->RunCommandQueue = METAL_RunCommandQueue;
+scale:render\metal\SDL_render_metal.m:    renderer->RenderReadPixels = METAL_RenderReadPixels;
+scale:render\metal\SDL_render_metal.m:    renderer->RenderPresent = METAL_RenderPresent;
+scale:render\metal\SDL_render_metal.m:    renderer->DestroyTexture = METAL_DestroyTexture;
+scale:render\metal\SDL_render_metal.m:    renderer->DestroyRenderer = METAL_DestroyRenderer;
+scale:render\metal\SDL_render_metal.m:    renderer->GetMetalLayer = METAL_GetMetalLayer;
+scale:render\metal\SDL_render_metal.m:    renderer->GetMetalCommandEncoder = METAL_GetMetalCommandEncoder;
+scale:render\metal\SDL_render_metal.m:    renderer->info = METAL_RenderDriver.info;
+scale:render\metal\SDL_render_metal.m:    renderer->info.flags = (SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
+scale:render\metal\SDL_render_metal.m:    renderer->always_batch = SDL_TRUE;
+scale:render\metal\SDL_render_metal.m:            renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+scale:render\metal\SDL_render_metal.m:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+scale:render\metal\SDL_render_metal.m:    renderer->info.max_texture_width = maxtexsize;
+scale:render\metal\SDL_render_metal.m:    renderer->info.max_texture_height = maxtexsize;
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:        if (SDL_GL_MakeCurrent(renderer->window, data->context) < 0) {
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    SDL_GL_GetDrawableSize(renderer->window, w, h);
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *renderdata = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *renderdata = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *renderdata = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    data->drawstate.target = renderer->target;
+scale:render\opengl\SDL_render_gl.c:        SDL_GL_GetDrawableSize(renderer->window, &data->drawstate.drawablew, &data->drawstate.drawableh);
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    Uint32 temp_format = renderer->target ? renderer->target->format : SDL_PIXELFORMAT_ARGB8888;
+scale:render\opengl\SDL_render_gl.c:    data->glReadPixels(rect->x, renderer->target ? rect->y : (h-rect->y)-rect->h,
+scale:render\opengl\SDL_render_gl.c:    if (!renderer->target) {
+scale:render\opengl\SDL_render_gl.c:    SDL_GL_SwapWindow(renderer->window);
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *renderdata = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    GL_RenderData *data = (GL_RenderData *) renderer->driverdata;
+scale:render\opengl\SDL_render_gl.c:    renderer->GetOutputSize = GL_GetOutputSize;
+scale:render\opengl\SDL_render_gl.c:    renderer->SupportsBlendMode = GL_SupportsBlendMode;
+scale:render\opengl\SDL_render_gl.c:    renderer->CreateTexture = GL_CreateTexture;
+scale:render\opengl\SDL_render_gl.c:    renderer->UpdateTexture = GL_UpdateTexture;
+scale:render\opengl\SDL_render_gl.c:    renderer->UpdateTextureYUV = GL_UpdateTextureYUV;
+scale:render\opengl\SDL_render_gl.c:    renderer->LockTexture = GL_LockTexture;
+scale:render\opengl\SDL_render_gl.c:    renderer->UnlockTexture = GL_UnlockTexture;
+scale:render\opengl\SDL_render_gl.c:    renderer->SetRenderTarget = GL_SetRenderTarget;
+scale:render\opengl\SDL_render_gl.c:    renderer->QueueSetViewport = GL_QueueSetViewport;
+scale:render\opengl\SDL_render_gl.c:    renderer->QueueSetDrawColor = GL_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+scale:render\opengl\SDL_render_gl.c:    renderer->QueueDrawPoints = GL_QueueDrawPoints;
+scale:render\opengl\SDL_render_gl.c:    renderer->QueueDrawLines = GL_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+scale:render\opengl\SDL_render_gl.c:    renderer->QueueFillRects = GL_QueueFillRects;
+scale:render\opengl\SDL_render_gl.c:    renderer->QueueCopy = GL_QueueCopy;
+scale:render\opengl\SDL_render_gl.c:    renderer->QueueCopyEx = GL_QueueCopyEx;
+scale:render\opengl\SDL_render_gl.c:    renderer->RunCommandQueue = GL_RunCommandQueue;
+scale:render\opengl\SDL_render_gl.c:    renderer->RenderReadPixels = GL_RenderReadPixels;
+scale:render\opengl\SDL_render_gl.c:    renderer->RenderPresent = GL_RenderPresent;
+scale:render\opengl\SDL_render_gl.c:    renderer->DestroyTexture = GL_DestroyTexture;
+scale:render\opengl\SDL_render_gl.c:    renderer->DestroyRenderer = GL_DestroyRenderer;
+scale:render\opengl\SDL_render_gl.c:    renderer->GL_BindTexture = GL_BindTexture;
+scale:render\opengl\SDL_render_gl.c:    renderer->GL_UnbindTexture = GL_UnbindTexture;
+scale:render\opengl\SDL_render_gl.c:    renderer->info = GL_RenderDriver.info;
+scale:render\opengl\SDL_render_gl.c:    renderer->info.flags = SDL_RENDERER_ACCELERATED;
+scale:render\opengl\SDL_render_gl.c:    renderer->driverdata = data;
+scale:render\opengl\SDL_render_gl.c:    renderer->window = window;
+scale:render\opengl\SDL_render_gl.c:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+scale:render\opengl\SDL_render_gl.c:        renderer->info.max_texture_width = value;
+scale:render\opengl\SDL_render_gl.c:        renderer->info.max_texture_height = value;
+scale:render\opengl\SDL_render_gl.c:        renderer->info.max_texture_width = value;
+scale:render\opengl\SDL_render_gl.c:        renderer->info.max_texture_height = value;
+scale:render\opengl\SDL_render_gl.c:        renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_YV12;
+scale:render\opengl\SDL_render_gl.c:        renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_IYUV;
+scale:render\opengl\SDL_render_gl.c:        renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_NV12;
+scale:render\opengl\SDL_render_gl.c:        renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_NV21;
+scale:render\opengl\SDL_render_gl.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_UYVY;
+scale:render\opengl\SDL_render_gl.c:        renderer->info.flags |= SDL_RENDERER_TARGETTEXTURE;
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:        if (SDL_GL_MakeCurrent(renderer->window, data->context) < 0) {
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:    SDL_GL_GetDrawableSize(renderer->window, w, h);
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *renderdata = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:        data->fbo = GLES_GetFBO(renderer->driverdata, texture->w, texture->h);
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *renderdata = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:    data->drawstate.target = renderer->target;
+scale:render\opengles\SDL_render_gles.c:    if (!renderer->target) {
+scale:render\opengles\SDL_render_gles.c:        SDL_GL_GetDrawableSize(renderer->window, &data->drawstate.drawablew, &data->drawstate.drawableh);
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:    Uint32 temp_format = renderer->target ? renderer->target->format : SDL_PIXELFORMAT_ABGR8888;
+scale:render\opengles\SDL_render_gles.c:    data->glReadPixels(rect->x, renderer->target ? rect->y : (h-rect->y)-rect->h,
+scale:render\opengles\SDL_render_gles.c:    if (!renderer->target) {
+scale:render\opengles\SDL_render_gles.c:    SDL_GL_SwapWindow(renderer->window);
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *renderdata = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:    GLES_RenderData *data = (GLES_RenderData *) renderer->driverdata;
+scale:render\opengles\SDL_render_gles.c:    renderer->WindowEvent = GLES_WindowEvent;
+scale:render\opengles\SDL_render_gles.c:    renderer->GetOutputSize = GLES_GetOutputSize;
+scale:render\opengles\SDL_render_gles.c:    renderer->SupportsBlendMode = GLES_SupportsBlendMode;
+scale:render\opengles\SDL_render_gles.c:    renderer->CreateTexture = GLES_CreateTexture;
+scale:render\opengles\SDL_render_gles.c:    renderer->UpdateTexture = GLES_UpdateTexture;
+scale:render\opengles\SDL_render_gles.c:    renderer->LockTexture = GLES_LockTexture;
+scale:render\opengles\SDL_render_gles.c:    renderer->UnlockTexture = GLES_UnlockTexture;
+scale:render\opengles\SDL_render_gles.c:    renderer->SetRenderTarget = GLES_SetRenderTarget;
+scale:render\opengles\SDL_render_gles.c:    renderer->QueueSetViewport = GLES_QueueSetViewport;
+scale:render\opengles\SDL_render_gles.c:    renderer->QueueSetDrawColor = GLES_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+scale:render\opengles\SDL_render_gles.c:    renderer->QueueDrawPoints = GLES_QueueDrawPoints;
+scale:render\opengles\SDL_render_gles.c:    renderer->QueueDrawLines = GLES_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+scale:render\opengles\SDL_render_gles.c:    renderer->QueueFillRects = GLES_QueueFillRects;
+scale:render\opengles\SDL_render_gles.c:    renderer->QueueCopy = GLES_QueueCopy;
+scale:render\opengles\SDL_render_gles.c:    renderer->QueueCopyEx = GLES_QueueCopyEx;
+scale:render\opengles\SDL_render_gles.c:    renderer->RunCommandQueue = GLES_RunCommandQueue;
+scale:render\opengles\SDL_render_gles.c:    renderer->RenderReadPixels = GLES_RenderReadPixels;
+scale:render\opengles\SDL_render_gles.c:    renderer->RenderPresent = GLES_RenderPresent;
+scale:render\opengles\SDL_render_gles.c:    renderer->DestroyTexture = GLES_DestroyTexture;
+scale:render\opengles\SDL_render_gles.c:    renderer->DestroyRenderer = GLES_DestroyRenderer;
+scale:render\opengles\SDL_render_gles.c:    renderer->GL_BindTexture = GLES_BindTexture;
+scale:render\opengles\SDL_render_gles.c:    renderer->GL_UnbindTexture = GLES_UnbindTexture;
+scale:render\opengles\SDL_render_gles.c:    renderer->info = GLES_RenderDriver.info;
+scale:render\opengles\SDL_render_gles.c:    renderer->info.flags = SDL_RENDERER_ACCELERATED;
+scale:render\opengles\SDL_render_gles.c:    renderer->driverdata = data;
+scale:render\opengles\SDL_render_gles.c:    renderer->window = window;
+scale:render\opengles\SDL_render_gles.c:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+scale:render\opengles\SDL_render_gles.c:    renderer->info.max_texture_width = value;
+scale:render\opengles\SDL_render_gles.c:    renderer->info.max_texture_height = value;
+scale:render\opengles\SDL_render_gles.c:        renderer->info.flags |= SDL_RENDERER_TARGETTEXTURE;
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *) renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *) renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:        if (SDL_GL_MakeCurrent(renderer->window, data->context) < 0) {
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    SDL_GL_GetDrawableSize(renderer->window, w, h);
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *) renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    if (renderer->target) {
+scale:render\opengles2\SDL_render_gles2.c:        if (renderer->target->format != texture->format) {
+scale:render\opengles2\SDL_render_gles2.c:                switch (renderer->target->format) {
+scale:render\opengles2\SDL_render_gles2.c:                switch (renderer->target->format) {
+scale:render\opengles2\SDL_render_gles2.c:                switch (renderer->target->format) {
+scale:render\opengles2\SDL_render_gles2.c:                switch (renderer->target->format) {
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *) renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    const SDL_bool colorswap = (renderer->target && (renderer->target->format == SDL_PIXELFORMAT_ARGB8888 || renderer->target->format == SDL_PIXELFORMAT_RGB888));
+scale:render\opengles2\SDL_render_gles2.c:    data->drawstate.target = renderer->target;
+scale:render\opengles2\SDL_render_gles2.c:        SDL_GL_GetDrawableSize(renderer->window, &data->drawstate.drawablew, &data->drawstate.drawableh);
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *renderdata = (GLES2_RenderData *)renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:       data->fbo = GLES2_GetFBO(renderer->driverdata, texture->w, texture->h);
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *) renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    Uint32 temp_format = renderer->target ? renderer->target->format : SDL_PIXELFORMAT_ABGR8888;
+scale:render\opengles2\SDL_render_gles2.c:    data->glReadPixels(rect->x, renderer->target ? rect->y : (h-rect->y)-rect->h,
+scale:render\opengles2\SDL_render_gles2.c:    if (!renderer->target) {
+scale:render\opengles2\SDL_render_gles2.c:    SDL_GL_SwapWindow(renderer->window);
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    GLES2_RenderData *data = (GLES2_RenderData *)renderer->driverdata;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->info = GLES2_RenderDriver.info;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->info.flags = (SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
+scale:render\opengles2\SDL_render_gles2.c:    renderer->driverdata = data;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->window = window;
+scale:render\opengles2\SDL_render_gles2.c:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->info.max_texture_width = value;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->info.max_texture_height = value;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->WindowEvent         = GLES2_WindowEvent;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->GetOutputSize       = GLES2_GetOutputSize;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->SupportsBlendMode   = GLES2_SupportsBlendMode;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->CreateTexture       = GLES2_CreateTexture;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->UpdateTexture       = GLES2_UpdateTexture;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->UpdateTextureYUV    = GLES2_UpdateTextureYUV;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->LockTexture         = GLES2_LockTexture;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->UnlockTexture       = GLES2_UnlockTexture;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->SetRenderTarget     = GLES2_SetRenderTarget;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->QueueSetViewport    = GLES2_QueueSetViewport;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->QueueSetDrawColor   = GLES2_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+scale:render\opengles2\SDL_render_gles2.c:    renderer->QueueDrawPoints     = GLES2_QueueDrawPoints;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->QueueDrawLines      = GLES2_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+scale:render\opengles2\SDL_render_gles2.c:    renderer->QueueFillRects      = GLES2_QueueFillRects;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->QueueCopy           = GLES2_QueueCopy;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->QueueCopyEx         = GLES2_QueueCopyEx;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->RunCommandQueue     = GLES2_RunCommandQueue;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->RenderReadPixels    = GLES2_RenderReadPixels;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->RenderPresent       = GLES2_RenderPresent;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->DestroyTexture      = GLES2_DestroyTexture;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->DestroyRenderer     = GLES2_DestroyRenderer;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->GL_BindTexture      = GLES2_BindTexture;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->GL_UnbindTexture    = GLES2_UnbindTexture;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_YV12;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_IYUV;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_NV12;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_NV21;
+scale:render\opengles2\SDL_render_gles2.c:    renderer->info.texture_formats[renderer->info.num_texture_formats++] = SDL_PIXELFORMAT_EXTERNAL_OES;
+scale:render\psp\SDL_render_psp.c:    PSP_RenderData *data = (PSP_RenderData *) renderer->driverdata;
+scale:render\psp\SDL_render_psp.c:/*      PSP_RenderData *renderdata = (PSP_RenderData *) renderer->driverdata; */
+scale:render\psp\SDL_render_psp.c:    PSP_RenderData *data = (PSP_RenderData *) renderer->driverdata;
+scale:render\psp\SDL_render_psp.c:    PSP_RenderData *data = (PSP_RenderData *) renderer->driverdata;
+scale:render\psp\SDL_render_psp.c:    PSP_RenderData *data = (PSP_RenderData *) renderer->driverdata;
+scale:render\psp\SDL_render_psp.c:    PSP_RenderData *renderdata = (PSP_RenderData *) renderer->driverdata;
+scale:render\psp\SDL_render_psp.c:    PSP_RenderData *data = (PSP_RenderData *) renderer->driverdata;
+scale:render\psp\SDL_render_psp.c:    renderer->WindowEvent = PSP_WindowEvent;
+scale:render\psp\SDL_render_psp.c:    renderer->CreateTexture = PSP_CreateTexture;
+scale:render\psp\SDL_render_psp.c:    renderer->SetTextureColorMod = PSP_SetTextureColorMod;
+scale:render\psp\SDL_render_psp.c:    renderer->UpdateTexture = PSP_UpdateTexture;
+scale:render\psp\SDL_render_psp.c:    renderer->LockTexture = PSP_LockTexture;
+scale:render\psp\SDL_render_psp.c:    renderer->UnlockTexture = PSP_UnlockTexture;
+scale:render\psp\SDL_render_psp.c:    renderer->SetRenderTarget = PSP_SetRenderTarget;
+scale:render\psp\SDL_render_psp.c:    renderer->QueueSetViewport = PSP_QueueSetViewport;
+scale:render\psp\SDL_render_psp.c:    renderer->QueueSetDrawColor = PSP_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+scale:render\psp\SDL_render_psp.c:    renderer->QueueDrawPoints = PSP_QueueDrawPoints;
+scale:render\psp\SDL_render_psp.c:    renderer->QueueDrawLines = PSP_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+scale:render\psp\SDL_render_psp.c:    renderer->QueueFillRects = PSP_QueueFillRects;
+scale:render\psp\SDL_render_psp.c:    renderer->QueueCopy = PSP_QueueCopy;
+scale:render\psp\SDL_render_psp.c:    renderer->QueueCopyEx = PSP_QueueCopyEx;
+scale:render\psp\SDL_render_psp.c:    renderer->RunCommandQueue = PSP_RunCommandQueue;
+scale:render\psp\SDL_render_psp.c:    renderer->RenderReadPixels = PSP_RenderReadPixels;
+scale:render\psp\SDL_render_psp.c:    renderer->RenderPresent = PSP_RenderPresent;
+scale:render\psp\SDL_render_psp.c:    renderer->DestroyTexture = PSP_DestroyTexture;
+scale:render\psp\SDL_render_psp.c:    renderer->DestroyRenderer = PSP_DestroyRenderer;
+scale:render\psp\SDL_render_psp.c:    renderer->info = PSP_RenderDriver.info;
+scale:render\psp\SDL_render_psp.c:    renderer->info.flags = (SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
+scale:render\psp\SDL_render_psp.c:    renderer->driverdata = data;
+scale:render\psp\SDL_render_psp.c:    renderer->window = window;
+scale:render\SDL_render.c:    SDL_assert(renderer && renderer->magic == &renderer_magic); \
+scale:render\SDL_render.c:    if (!renderer || renderer->magic != &renderer_magic) { \
+scale:render\SDL_render.c:    SDL_AllocVertGap *prevgap = &renderer->vertex_data_gaps;
+scale:render\SDL_render.c:    SDL_assert((renderer->render_commands == NULL) == (renderer->render_commands_tail == NULL));
+scale:render\SDL_render.c:    if (renderer->render_commands == NULL) {  /* nothing to do! */
+scale:render\SDL_render.c:        SDL_assert(renderer->vertex_data_used == 0);
+scale:render\SDL_render.c:    DebugLogRenderCommands(renderer->render_commands);
+scale:render\SDL_render.c:    retval = renderer->RunCommandQueue(renderer, renderer->render_commands, renderer->vertex_data, renderer->vertex_data_used);
+scale:render\SDL_render.c:    prevgap->next = renderer->vertex_data_gaps_pool;
+scale:render\SDL_render.c:    renderer->vertex_data_gaps_pool = renderer->vertex_data_gaps.next;
+scale:render\SDL_render.c:    renderer->vertex_data_gaps.next = NULL;
+scale:render\SDL_render.c:    if (renderer->render_commands_tail != NULL) {
+scale:render\SDL_render.c:        renderer->render_commands_tail->next = renderer->render_commands_pool;
+scale:render\SDL_render.c:        renderer->render_commands_pool = renderer->render_commands;
+scale:render\SDL_render.c:        renderer->render_commands_tail = NULL;
+scale:render\SDL_render.c:        renderer->render_commands = NULL;
+scale:render\SDL_render.c:    renderer->vertex_data_used = 0;
+scale:render\SDL_render.c:    renderer->render_command_generation++;
+scale:render\SDL_render.c:    renderer->color_queued = SDL_FALSE;
+scale:render\SDL_render.c:    renderer->viewport_queued = SDL_FALSE;
+scale:render\SDL_render.c:    renderer->cliprect_queued = SDL_FALSE;
+scale:render\SDL_render.c:    if (texture->last_command_generation == renderer->render_command_generation) {
+scale:render\SDL_render.c:    return renderer->batching ? 0 : FlushRenderCommands(renderer);
+scale:render\SDL_render.c:    SDL_AllocVertGap *retval = renderer->vertex_data_gaps_pool;
+scale:render\SDL_render.c:        renderer->vertex_data_gaps_pool = retval->next;
+scale:render\SDL_render.c:    const size_t needed = renderer->vertex_data_used + numbytes + alignment;
+scale:render\SDL_render.c:    SDL_AllocVertGap *prevgap = &renderer->vertex_data_gaps;
+scale:render\SDL_render.c:                gap->next = renderer->vertex_data_gaps_pool;
+scale:render\SDL_render.c:                renderer->vertex_data_gaps_pool = gap;
+scale:render\SDL_render.c:            return ((Uint8 *) renderer->vertex_data) + aligned;
+scale:render\SDL_render.c:    while (needed > renderer->vertex_data_allocation) {
+scale:render\SDL_render.c:        const size_t current_allocation = renderer->vertex_data ? renderer->vertex_data_allocation : 1024;
+scale:render\SDL_render.c:        void *ptr = SDL_realloc(renderer->vertex_data, newsize);
+scale:render\SDL_render.c:        renderer->vertex_data = ptr;
+scale:render\SDL_render.c:        renderer->vertex_data_allocation = newsize;
+scale:render\SDL_render.c:    aligner = (alignment && ((renderer->vertex_data_used % alignment) != 0)) ? (alignment - (renderer->vertex_data_used % alignment)) : 0;
+scale:render\SDL_render.c:    aligned = renderer->vertex_data_used + aligner;
+scale:render\SDL_render.c:    retval = ((Uint8 *) renderer->vertex_data) + aligned;
+scale:render\SDL_render.c:            newgap->offset = renderer->vertex_data_used;
+scale:render\SDL_render.c:    renderer->vertex_data_used += aligner + numbytes;
+scale:render\SDL_render.c:    retval = renderer->render_commands_pool;
+scale:render\SDL_render.c:        renderer->render_commands_pool = retval->next;
+scale:render\SDL_render.c:    SDL_assert((renderer->render_commands == NULL) == (renderer->render_commands_tail == NULL));
+scale:render\SDL_render.c:    if (renderer->render_commands_tail != NULL) {
+scale:render\SDL_render.c:        renderer->render_commands_tail->next = retval;
+scale:render\SDL_render.c:        renderer->render_commands = retval;
+scale:render\SDL_render.c:    renderer->render_commands_tail = retval;
+scale:render\SDL_render.c:    if (!renderer->viewport_queued || (SDL_memcmp(&renderer->viewport, &renderer->last_queued_viewport, sizeof (SDL_Rect)) != 0)) {
+scale:render\SDL_render.c:            SDL_memcpy(&cmd->data.viewport.rect, &renderer->viewport, sizeof (renderer->viewport));
+scale:render\SDL_render.c:            retval = renderer->QueueSetViewport(renderer, cmd);
+scale:render\SDL_render.c:                SDL_memcpy(&renderer->last_queued_viewport, &renderer->viewport, sizeof (SDL_Rect));
+scale:render\SDL_render.c:                renderer->viewport_queued = SDL_TRUE;
+scale:render\SDL_render.c:    if ((!renderer->cliprect_queued) ||
+scale:render\SDL_render.c:         (renderer->clipping_enabled != renderer->last_queued_cliprect_enabled) ||
+scale:render\SDL_render.c:         (SDL_memcmp(&renderer->clip_rect, &renderer->last_queued_cliprect, sizeof (SDL_Rect)) != 0)) {
+scale:render\SDL_render.c:            cmd->data.cliprect.enabled = renderer->clipping_enabled;
+scale:render\SDL_render.c:            SDL_memcpy(&cmd->data.cliprect.rect, &renderer->clip_rect, sizeof (cmd->data.cliprect.rect));
+scale:render\SDL_render.c:            SDL_memcpy(&renderer->last_queued_cliprect, &renderer->clip_rect, sizeof (SDL_Rect));
+scale:render\SDL_render.c:            renderer->last_queued_cliprect_enabled = renderer->clipping_enabled;
+scale:render\SDL_render.c:            renderer->cliprect_queued = SDL_TRUE;
+scale:render\SDL_render.c:    if (!renderer->color_queued || (color != renderer->last_queued_color)) {
+scale:render\SDL_render.c:            retval = renderer->QueueSetDrawColor(renderer, cmd);
+scale:render\SDL_render.c:                renderer->last_queued_color = color;
+scale:render\SDL_render.c:                renderer->color_queued = SDL_TRUE;
+scale:render\SDL_render.c:    cmd->data.color.r = renderer->r;
+scale:render\SDL_render.c:    cmd->data.color.g = renderer->g;
+scale:render\SDL_render.c:    cmd->data.color.b = renderer->b;
+scale:render\SDL_render.c:    cmd->data.color.a = renderer->a;
+scale:render\SDL_render.c:    if (PrepQueueCmdDraw(renderer, renderer->r, renderer->g, renderer->b, renderer->a) == 0) {
+scale:render\SDL_render.c:            cmd->data.draw.r = renderer->r;
+scale:render\SDL_render.c:            cmd->data.draw.g = renderer->g;
+scale:render\SDL_render.c:            cmd->data.draw.b = renderer->b;
+scale:render\SDL_render.c:            cmd->data.draw.a = renderer->a;
+scale:render\SDL_render.c:            cmd->data.draw.blend = renderer->blendMode;
+scale:render\SDL_render.c:        retval = renderer->QueueDrawPoints(renderer, cmd, points, count);
+scale:render\SDL_render.c:        retval = renderer->QueueDrawLines(renderer, cmd, points, count);
+scale:render\SDL_render.c:        retval = renderer->QueueFillRects(renderer, cmd, rects, count);
+scale:render\SDL_render.c:        retval = renderer->QueueCopy(renderer, cmd, texture, srcrect, dstrect);
+scale:render\SDL_render.c:    SDL_assert(renderer->QueueCopyEx != NULL);  /* should have caught at higher level. */
+scale:render\SDL_render.c:        retval = renderer->QueueCopyEx(renderer, cmd, texture, srcquad, dstrect, angle, center, flip);
+scale:render\SDL_render.c:    SDL_LockMutex(renderer->target_mutex);
+scale:render\SDL_render.c:    *logical_w = renderer->target ? renderer->logical_w_backup : renderer->logical_w;
+scale:render\SDL_render.c:    *logical_h = renderer->target ? renderer->logical_h_backup : renderer->logical_h;
+scale:render\SDL_render.c:    *viewport = renderer->target ? renderer->viewport_backup : renderer->viewport;
+scale:render\SDL_render.c:    *scale = renderer->target ? renderer->scale_backup : renderer->scale;
+scale:render\SDL_render.c:    SDL_UnlockMutex(renderer->target_mutex);
+scale:render\SDL_render.c:        if (window == renderer->window) {
+scale:render\SDL_render.c:            if (renderer->WindowEvent) {
+scale:render\SDL_render.c:                renderer->WindowEvent(renderer, &event->window);
+scale:render\SDL_render.c:                if (renderer->logical_w) {
+scale:render\SDL_render.c:                    if (renderer->GetOutputSize) {
+scale:render\SDL_render.c:                        renderer->GetOutputSize(renderer, &w, &h);
+scale:render\SDL_render.c:                        SDL_GetWindowSize(renderer->window, &w, &h);
+scale:render\SDL_render.c:                    if (renderer->target) {
+scale:render\SDL_render.c:                        renderer->viewport_backup.x = 0;
+scale:render\SDL_render.c:                        renderer->viewport_backup.y = 0;
+scale:render\SDL_render.c:                        renderer->viewport_backup.w = w;
+scale:render\SDL_render.c:                        renderer->viewport_backup.h = h;
+scale:render\SDL_render.c:                        renderer->viewport.x = 0;
+scale:render\SDL_render.c:                        renderer->viewport.y = 0;
+scale:render\SDL_render.c:                        renderer->viewport.w = w;
+scale:render\SDL_render.c:                        renderer->viewport.h = h;
+scale:render\SDL_render.c:                renderer->hidden = SDL_TRUE;
+scale:render\SDL_render.c:                    renderer->hidden = SDL_FALSE;
+scale:render\SDL_render.c:                renderer->hidden = SDL_TRUE;
+scale:render\SDL_render.c:                    renderer->hidden = SDL_FALSE;
+scale:render\SDL_render.c:        if (window == renderer->window) {
+scale:render\SDL_render.c:                event->motion.x -= (int)(viewport.x * renderer->dpi_scale.x);
+scale:render\SDL_render.c:                event->motion.y -= (int)(viewport.y * renderer->dpi_scale.y);
+scale:render\SDL_render.c:                event->motion.x = (int)(event->motion.x / (scale.x * renderer->dpi_scale.x));
+scale:render\SDL_render.c:                event->motion.y = (int)(event->motion.y / (scale.y * renderer->dpi_scale.y));
+scale:render\SDL_render.c:                    event->motion.xrel = SDL_max(1, (int)(event->motion.xrel / (scale.x * renderer->dpi_scale.x)));
+scale:render\SDL_render.c:                    event->motion.xrel = SDL_min(-1, (int)(event->motion.xrel / (scale.x * renderer->dpi_scale.x)));
+scale:render\SDL_render.c:                    event->motion.yrel = SDL_max(1, (int)(event->motion.yrel / (scale.y * renderer->dpi_scale.y)));
+scale:render\SDL_render.c:                    event->motion.yrel = SDL_min(-1, (int)(event->motion.yrel / (scale.y * renderer->dpi_scale.y)));
+scale:render\SDL_render.c:        if (window == renderer->window) {
+scale:render\SDL_render.c:                event->button.x -= (int)(viewport.x * renderer->dpi_scale.x);
+scale:render\SDL_render.c:                event->button.y -= (int)(viewport.y * renderer->dpi_scale.y);
+scale:render\SDL_render.c:                event->button.x = (int)(event->button.x / (scale.x * renderer->dpi_scale.x));
+scale:render\SDL_render.c:                event->button.y = (int)(event->button.y / (scale.y * renderer->dpi_scale.y));
+scale:render\SDL_render.c:            event->tfinger.x -= (viewport.x * renderer->dpi_scale.x);
+scale:render\SDL_render.c:            event->tfinger.y -= (viewport.y * renderer->dpi_scale.y);
+scale:render\SDL_render.c:            event->tfinger.x = (event->tfinger.x / (scale.x * renderer->dpi_scale.x));
+scale:render\SDL_render.c:            event->tfinger.y = (event->tfinger.y / (scale.y * renderer->dpi_scale.y));
+scale:render\SDL_render.c:    SDL_assert(renderer->QueueSetViewport != NULL);
+scale:render\SDL_render.c:    SDL_assert(renderer->QueueSetDrawColor != NULL);
+scale:render\SDL_render.c:    SDL_assert(renderer->QueueDrawPoints != NULL);
+scale:render\SDL_render.c:    SDL_assert(renderer->QueueDrawLines != NULL);
+scale:render\SDL_render.c:    SDL_assert(renderer->QueueFillRects != NULL);
+scale:render\SDL_render.c:    SDL_assert(renderer->QueueCopy != NULL);
+scale:render\SDL_render.c:    SDL_assert(renderer->RunCommandQueue != NULL);
+scale:render\SDL_render.c:    if (renderer->always_batch) {
+scale:render\SDL_render.c:    renderer->batching = batching;
+scale:render\SDL_render.c:    renderer->magic = &renderer_magic;
+scale:render\SDL_render.c:    renderer->window = window;
+scale:render\SDL_render.c:    renderer->target_mutex = SDL_CreateMutex();
+scale:render\SDL_render.c:    renderer->scale.x = 1.0f;
+scale:render\SDL_render.c:    renderer->scale.y = 1.0f;
+scale:render\SDL_render.c:    renderer->dpi_scale.x = 1.0f;
+scale:render\SDL_render.c:    renderer->dpi_scale.y = 1.0f;
+scale:render\SDL_render.c:    renderer->render_command_generation = 1;
+scale:render\SDL_render.c:    if (window && renderer->GetOutputSize) {
+scale:render\SDL_render.c:        if (renderer->GetOutputSize(renderer, &output_w, &output_h) == 0) {
+scale:render\SDL_render.c:            SDL_GetWindowSize(renderer->window, &window_w, &window_h);
+scale:render\SDL_render.c:            renderer->dpi_scale.x = (float)window_w / output_w;
+scale:render\SDL_render.c:            renderer->dpi_scale.y = (float)window_h / output_h;
+scale:render\SDL_render.c:        renderer->hidden = SDL_TRUE;
+scale:render\SDL_render.c:        renderer->hidden = SDL_FALSE;
+scale:render\SDL_render.c:                "Created renderer: %s", renderer->info.name);
+scale:render\SDL_render.c:        renderer->magic = &renderer_magic;
+scale:render\SDL_render.c:        renderer->target_mutex = SDL_CreateMutex();
+scale:render\SDL_render.c:        renderer->scale.x = 1.0f;
+scale:render\SDL_render.c:        renderer->scale.y = 1.0f;
+scale:render\SDL_render.c:        renderer->render_command_generation = 1;
+scale:render\SDL_render.c:    *info = renderer->info;
+scale:render\SDL_render.c:    if (renderer->target) {
+scale:render\SDL_render.c:        return SDL_QueryTexture(renderer->target, NULL, NULL, w, h);
+scale:render\SDL_render.c:    } else if (renderer->GetOutputSize) {
+scale:render\SDL_render.c:        return renderer->GetOutputSize(renderer, w, h);
+scale:render\SDL_render.c:    } else if (renderer->window) {
+scale:render\SDL_render.c:        SDL_GetWindowSize(renderer->window, w, h);
+scale:render\SDL_render.c:        return renderer->SupportsBlendMode && renderer->SupportsBlendMode(renderer, blendMode);
+scale:render\SDL_render.c:    for (i = 0; i < renderer->info.num_texture_formats; ++i) {
+scale:render\SDL_render.c:        if (renderer->info.texture_formats[i] == format) {
+scale:render\SDL_render.c:        for (i = 0; i < renderer->info.num_texture_formats; ++i) {
+scale:render\SDL_render.c:            if (renderer->info.texture_formats[i] == format) {
+scale:render\SDL_render.c:                return renderer->info.texture_formats[i];
+scale:render\SDL_render.c:        for (i = 0; i < renderer->info.num_texture_formats; ++i) {
+scale:render\SDL_render.c:            if (!SDL_ISPIXELFORMAT_FOURCC(renderer->info.texture_formats[i]) &&
+scale:render\SDL_render.c:                SDL_ISPIXELFORMAT_ALPHA(renderer->info.texture_formats[i]) == hasAlpha) {
+scale:render\SDL_render.c:                return renderer->info.texture_formats[i];
+scale:render\SDL_render.c:    return renderer->info.texture_formats[0];
+scale:render\SDL_render.c:        format = renderer->info.texture_formats[0];
+scale:render\SDL_render.c:    if ((renderer->info.max_texture_width && w > renderer->info.max_texture_width) ||
+scale:render\SDL_render.c:        (renderer->info.max_texture_height && h > renderer->info.max_texture_height)) {
+scale:render\SDL_render.c:        SDL_SetError("Texture dimensions are limited to %dx%d", renderer->info.max_texture_width, renderer->info.max_texture_height);
+scale:render\SDL_render.c:    texture->next = renderer->textures;
+scale:render\SDL_render.c:    if (renderer->textures) {
+scale:render\SDL_render.c:        renderer->textures->prev = texture;
+scale:render\SDL_render.c:    renderer->textures = texture;
+scale:render\SDL_render.c:        if (renderer->CreateTexture(renderer, texture) < 0) {
+scale:render\SDL_render.c:        renderer->textures = texture;
+scale:render\SDL_render.c:            for (i = 0; i < (int)renderer->info.num_texture_formats; ++i) {
+scale:render\SDL_render.c:                if (renderer->info.texture_formats[i] == SDL_PIXELFORMAT_ARGB8888) {
+scale:render\SDL_render.c:            for (i = 0; i < (int)renderer->info.num_texture_formats; ++i) {
+scale:render\SDL_render.c:                if (renderer->info.texture_formats[i] == SDL_PIXELFORMAT_ABGR8888) {
+scale:render\SDL_render.c:        for (i = 0; i < (int)renderer->info.num_texture_formats; ++i) {
+scale:render\SDL_render.c:            if (renderer->info.texture_formats[i] == fmt->format) {
+scale:render\SDL_render.c:        format = renderer->info.texture_formats[0];
+scale:render\SDL_render.c:        for (i = 0; i < (int)renderer->info.num_texture_formats; ++i) {
+scale:render\SDL_render.c:            if (!SDL_ISPIXELFORMAT_FOURCC(renderer->info.texture_formats[i]) &&
+scale:render\SDL_render.c:                    SDL_ISPIXELFORMAT_ALPHA(renderer->info.texture_formats[i]) == needAlpha) {
+scale:render\SDL_render.c:                format = renderer->info.texture_formats[i];
+scale:render\SDL_render.c:        return renderer->UpdateTexture(renderer, texture, rect, pixels, pitch);
+scale:render\SDL_render.c:        SDL_assert(renderer->UpdateTextureYUV);
+scale:render\SDL_render.c:        if (renderer->UpdateTextureYUV) {
+scale:render\SDL_render.c:            return renderer->UpdateTextureYUV(renderer, texture, rect, Yplane, Ypitch, Uplane, Upitch, Vplane, Vpitch);
+scale:render\SDL_render.c:        return renderer->LockTexture(renderer, texture, rect, pixels, pitch);
+scale:render\SDL_render.c:        renderer->UnlockTexture(renderer, texture);
+scale:render\SDL_render.c:    if (!renderer || !renderer->SetRenderTarget) {
+scale:render\SDL_render.c:    return (renderer->info.flags & SDL_RENDERER_TARGETTEXTURE) != 0;
+scale:render\SDL_render.c:    if (texture == renderer->target) {
+scale:render\SDL_render.c:    SDL_LockMutex(renderer->target_mutex);
+scale:render\SDL_render.c:    if (texture && !renderer->target) {
+scale:render\SDL_render.c:        renderer->viewport_backup = renderer->viewport;
+scale:render\SDL_render.c:        renderer->clip_rect_backup = renderer->clip_rect;
+scale:render\SDL_render.c:        renderer->clipping_enabled_backup = renderer->clipping_enabled;
+scale:render\SDL_render.c:        renderer->scale_backup = renderer->scale;
+scale:render\SDL_render.c:        renderer->logical_w_backup = renderer->logical_w;
+scale:render\SDL_render.c:        renderer->logical_h_backup = renderer->logical_h;
+scale:render\SDL_render.c:    renderer->target = texture;
+scale:render\SDL_render.c:    if (renderer->SetRenderTarget(renderer, texture) < 0) {
+scale:render\SDL_render.c:        SDL_UnlockMutex(renderer->target_mutex);
+scale:render\SDL_render.c:        renderer->viewport.x = 0;
+scale:render\SDL_render.c:        renderer->viewport.y = 0;
+scale:render\SDL_render.c:        renderer->viewport.w = texture->w;
+scale:render\SDL_render.c:        renderer->viewport.h = texture->h;
+scale:render\SDL_render.c:        SDL_zero(renderer->clip_rect);
+scale:render\SDL_render.c:        renderer->clipping_enabled = SDL_FALSE;
+scale:render\SDL_render.c:        renderer->scale.x = 1.0f;
+scale:render\SDL_render.c:        renderer->scale.y = 1.0f;
+scale:render\SDL_render.c:        renderer->logical_w = texture->w;
+scale:render\SDL_render.c:        renderer->logical_h = texture->h;
+scale:render\SDL_render.c:        renderer->viewport = renderer->viewport_backup;
+scale:render\SDL_render.c:        renderer->clip_rect = renderer->clip_rect_backup;
+scale:render\SDL_render.c:        renderer->clipping_enabled = renderer->clipping_enabled_backup;
+scale:render\SDL_render.c:        renderer->scale = renderer->scale_backup;
+scale:render\SDL_render.c:        renderer->logical_w = renderer->logical_w_backup;
+scale:render\SDL_render.c:        renderer->logical_h = renderer->logical_h_backup;
+scale:render\SDL_render.c:    SDL_UnlockMutex(renderer->target_mutex);
+scale:render\SDL_render.c:    return renderer->target;
+scale:render\SDL_render.c:    if (!renderer->logical_w || !renderer->logical_h) {
+scale:render\SDL_render.c:    want_aspect = (float)renderer->logical_w / renderer->logical_h;
+scale:render\SDL_render.c:    if (renderer->integer_scale) {
+scale:render\SDL_render.c:            scale = (float)(w / renderer->logical_w);
+scale:render\SDL_render.c:            scale = (float)(h / renderer->logical_h);
+scale:render\SDL_render.c:        viewport.w = (int)SDL_ceil(renderer->logical_w * scale);
+scale:render\SDL_render.c:        viewport.h = (int)SDL_ceil(renderer->logical_h * scale);
+scale:render\SDL_render.c:        scale = (float)w / renderer->logical_w;
+scale:render\SDL_render.c:            scale = (float)h / renderer->logical_h;
+scale:render\SDL_render.c:            viewport.w = (int)SDL_ceil(renderer->logical_w * scale);
+scale:render\SDL_render.c:            scale = (float)w / renderer->logical_w;
+scale:render\SDL_render.c:            viewport.h = (int)SDL_ceil(renderer->logical_h * scale);
+scale:render\SDL_render.c:            scale = (float)w / renderer->logical_w;
+scale:render\SDL_render.c:            viewport.h = (int)SDL_ceil(renderer->logical_h * scale);
+scale:render\SDL_render.c:             scale = (float)h / renderer->logical_h;
+scale:render\SDL_render.c:             viewport.w = (int)SDL_ceil(renderer->logical_w * scale);
+scale:render\SDL_render.c:        renderer->logical_w = 0;
+scale:render\SDL_render.c:        renderer->logical_h = 0;
+scale:render\SDL_render.c:    renderer->logical_w = w;
+scale:render\SDL_render.c:    renderer->logical_h = h;
+scale:render\SDL_render.c:        *w = renderer->logical_w;
+scale:render\SDL_render.c:        *h = renderer->logical_h;
+scale:render\SDL_render.c:    renderer->integer_scale = enable;
+scale:render\SDL_render.c:    return renderer->integer_scale;
+scale:render\SDL_render.c:        renderer->viewport.x = (int)SDL_floor(rect->x * renderer->scale.x);
+scale:render\SDL_render.c:        renderer->viewport.y = (int)SDL_floor(rect->y * renderer->scale.y);
+scale:render\SDL_render.c:        renderer->viewport.w = (int)SDL_ceil(rect->w * renderer->scale.x);
+scale:render\SDL_render.c:        renderer->viewport.h = (int)SDL_ceil(rect->h * renderer->scale.y);
+scale:render\SDL_render.c:        renderer->viewport.x = 0;
+scale:render\SDL_render.c:        renderer->viewport.y = 0;
+scale:render\SDL_render.c:        if (SDL_GetRendererOutputSize(renderer, &renderer->viewport.w, &renderer->viewport.h) < 0) {
+scale:render\SDL_render.c:        rect->x = (int)(renderer->viewport.x / renderer->scale.x);
+scale:render\SDL_render.c:        rect->y = (int)(renderer->viewport.y / renderer->scale.y);
+scale:render\SDL_render.c:        rect->w = (int)(renderer->viewport.w / renderer->scale.x);
+scale:render\SDL_render.c:        rect->h = (int)(renderer->viewport.h / renderer->scale.y);
+scale:render\SDL_render.c:        renderer->clipping_enabled = SDL_TRUE;
+scale:render\SDL_render.c:        renderer->clip_rect.x = (int)SDL_floor(rect->x * renderer->scale.x);
+scale:render\SDL_render.c:        renderer->clip_rect.y = (int)SDL_floor(rect->y * renderer->scale.y);
+scale:render\SDL_render.c:        renderer->clip_rect.w = (int)SDL_ceil(rect->w * renderer->scale.x);
+scale:render\SDL_render.c:        renderer->clip_rect.h = (int)SDL_ceil(rect->h * renderer->scale.y);
+scale:render\SDL_render.c:        renderer->clipping_enabled = SDL_FALSE;
+scale:render\SDL_render.c:        SDL_zero(renderer->clip_rect);
+scale:render\SDL_render.c:        rect->x = (int)(renderer->clip_rect.x / renderer->scale.x);
+scale:render\SDL_render.c:        rect->y = (int)(renderer->clip_rect.y / renderer->scale.y);
+scale:render\SDL_render.c:        rect->w = (int)(renderer->clip_rect.w / renderer->scale.x);
+scale:render\SDL_render.c:        rect->h = (int)(renderer->clip_rect.h / renderer->scale.y);
+scale:render\SDL_render.c:    return renderer->clipping_enabled;
+scale:render\SDL_render.c:    renderer->scale.x = scaleX;
+scale:render\SDL_render.c:    renderer->scale.y = scaleY;
+scale:render\SDL_render.c:        *scaleX = renderer->scale.x;
+scale:render\SDL_render.c:        *scaleY = renderer->scale.y;
+scale:render\SDL_render.c:    renderer->r = r;
+scale:render\SDL_render.c:    renderer->g = g;
+scale:render\SDL_render.c:    renderer->b = b;
+scale:render\SDL_render.c:    renderer->a = a;
+scale:render\SDL_render.c:        *r = renderer->r;
+scale:render\SDL_render.c:        *g = renderer->g;
+scale:render\SDL_render.c:        *b = renderer->b;
+scale:render\SDL_render.c:        *a = renderer->a;
+scale:render\SDL_render.c:    renderer->blendMode = blendMode;
+scale:render\SDL_render.c:    *blendMode = renderer->blendMode;
+scale:render\SDL_render.c:        frects[i].x = points[i].x * renderer->scale.x;
+scale:render\SDL_render.c:        frects[i].y = points[i].y * renderer->scale.y;
+scale:render\SDL_render.c:        frects[i].w = renderer->scale.x;
+scale:render\SDL_render.c:        frects[i].h = renderer->scale.y;
+scale:render\SDL_render.c:    if (renderer->hidden) {
+scale:render\SDL_render.c:    if (renderer->scale.x != 1.0f || renderer->scale.y != 1.0f) {
+scale:render\SDL_render.c:        fpoints[i].x = points[i].x * renderer->scale.x;
+scale:render\SDL_render.c:        fpoints[i].y = points[i].y * renderer->scale.y;
+scale:render\SDL_render.c:        frects[i].x = fpoints[i].x * renderer->scale.x;
+scale:render\SDL_render.c:        frects[i].y = fpoints[i].y * renderer->scale.y;
+scale:render\SDL_render.c:        frects[i].w = renderer->scale.x;
+scale:render\SDL_render.c:        frects[i].h = renderer->scale.y;
+scale:render\SDL_render.c:    if (renderer->hidden) {
+scale:render\SDL_render.c:    if (renderer->scale.x != 1.0f || renderer->scale.y != 1.0f) {
+scale:render\SDL_render.c:        fpoints[i].x = points[i].x * renderer->scale.x;
+scale:render\SDL_render.c:        fpoints[i].y = points[i].y * renderer->scale.y;
+scale:render\SDL_render.c:            frect->x = points[i].x * renderer->scale.x;
+scale:render\SDL_render.c:            frect->y = minY * renderer->scale.y;
+scale:render\SDL_render.c:            frect->w = renderer->scale.x;
+scale:render\SDL_render.c:            frect->h = (maxY - minY + 1) * renderer->scale.y;
+scale:render\SDL_render.c:            frect->x = minX * renderer->scale.x;
+scale:render\SDL_render.c:            frect->y = points[i].y * renderer->scale.y;
+scale:render\SDL_render.c:            frect->w = (maxX - minX + 1) * renderer->scale.x;
+scale:render\SDL_render.c:            frect->h = renderer->scale.y;
+scale:render\SDL_render.c:            fpoints[0].x = points[i].x * renderer->scale.x;
+scale:render\SDL_render.c:            fpoints[0].y = points[i].y * renderer->scale.y;
+scale:render\SDL_render.c:            fpoints[1].x = points[i+1].x * renderer->scale.x;
+scale:render\SDL_render.c:            fpoints[1].y = points[i+1].y * renderer->scale.y;
+scale:render\SDL_render.c:            frect->x = points[i].x * renderer->scale.x;
+scale:render\SDL_render.c:            frect->y = minY * renderer->scale.y;
+scale:render\SDL_render.c:            frect->w = renderer->scale.x;
+scale:render\SDL_render.c:            frect->h = (maxY - minY + 1) * renderer->scale.y;
+scale:render\SDL_render.c:            frect->x = minX * renderer->scale.x;
+scale:render\SDL_render.c:            frect->y = points[i].y * renderer->scale.y;
+scale:render\SDL_render.c:            frect->w = (maxX - minX + 1) * renderer->scale.x;
+scale:render\SDL_render.c:            frect->h = renderer->scale.y;
+scale:render\SDL_render.c:            fpoints[0].x = points[i].x * renderer->scale.x;
+scale:render\SDL_render.c:            fpoints[0].y = points[i].y * renderer->scale.y;
+scale:render\SDL_render.c:            fpoints[1].x = points[i+1].x * renderer->scale.x;
+scale:render\SDL_render.c:            fpoints[1].y = points[i+1].y * renderer->scale.y;
+scale:render\SDL_render.c:    if (renderer->hidden) {
+scale:render\SDL_render.c:    if (renderer->scale.x != 1.0f || renderer->scale.y != 1.0f) {
+scale:render\SDL_render.c:        fpoints[i].x = points[i].x * renderer->scale.x;
+scale:render\SDL_render.c:        fpoints[i].y = points[i].y * renderer->scale.y;
+scale:render\SDL_render.c:    if (renderer->hidden) {
+scale:render\SDL_render.c:    if (renderer->scale.x != 1.0f || renderer->scale.y != 1.0f) {
+scale:render\SDL_render.c:        fpoints[i].x = points[i].x * renderer->scale.x;
+scale:render\SDL_render.c:        fpoints[i].y = points[i].y * renderer->scale.y;
+scale:render\SDL_render.c:    if (renderer->hidden) {
+scale:render\SDL_render.c:    if (renderer->hidden) {
+scale:render\SDL_render.c:    if (renderer->hidden) {
+scale:render\SDL_render.c:        frects[i].x = rects[i].x * renderer->scale.x;
+scale:render\SDL_render.c:        frects[i].y = rects[i].y * renderer->scale.y;
+scale:render\SDL_render.c:        frects[i].w = rects[i].w * renderer->scale.x;
+scale:render\SDL_render.c:        frects[i].h = rects[i].h * renderer->scale.y;
+scale:render\SDL_render.c:    if (renderer->hidden) {
+scale:render\SDL_render.c:        frects[i].x = rects[i].x * renderer->scale.x;
+scale:render\SDL_render.c:        frects[i].y = rects[i].y * renderer->scale.y;
+scale:render\SDL_render.c:        frects[i].w = rects[i].w * renderer->scale.x;
+scale:render\SDL_render.c:        frects[i].h = rects[i].h * renderer->scale.y;
+scale:render\SDL_render.c:    if (renderer->hidden) {
+scale:render\SDL_render.c:    real_dstrect.x *= renderer->scale.x;
+scale:render\SDL_render.c:    real_dstrect.y *= renderer->scale.y;
+scale:render\SDL_render.c:    real_dstrect.w *= renderer->scale.x;
+scale:render\SDL_render.c:    real_dstrect.h *= renderer->scale.y;
+scale:render\SDL_render.c:    texture->last_command_generation = renderer->render_command_generation;
+scale:render\SDL_render.c:    if (!renderer->QueueCopyEx) {
+scale:render\SDL_render.c:    if (renderer->hidden) {
+scale:render\SDL_render.c:    real_dstrect.x *= renderer->scale.x;
+scale:render\SDL_render.c:    real_dstrect.y *= renderer->scale.y;
+scale:render\SDL_render.c:    real_dstrect.w *= renderer->scale.x;
+scale:render\SDL_render.c:    real_dstrect.h *= renderer->scale.y;
+scale:render\SDL_render.c:    real_center.x *= renderer->scale.x;
+scale:render\SDL_render.c:    real_center.y *= renderer->scale.y;
+scale:render\SDL_render.c:    texture->last_command_generation = renderer->render_command_generation;
+scale:render\SDL_render.c:    if (!renderer->RenderReadPixels) {
+video\directfb\SDL_DirectFB_render.c:    DirectFB_RenderData *data = (DirectFB_RenderData *) renderer->driverdata;
+video\directfb\SDL_DirectFB_render.c:    switch (renderer->blendMode) {
+video\directfb\SDL_DirectFB_render.c:    SDL_Window *window = renderer->window;
+video\directfb\SDL_DirectFB_render.c:    SDL_Window *window = renderer->window;
+video\directfb\SDL_DirectFB_render.c:    DirectFB_RenderData *data = (DirectFB_RenderData *) renderer->driverdata;
+video\directfb\SDL_DirectFB_render.c:    DirectFB_RenderData *data = (DirectFB_RenderData *) renderer->driverdata;
+video\directfb\SDL_DirectFB_render.c:                    SDL_Window *window = renderer->window;
+video\directfb\SDL_DirectFB_render.c:    DirectFB_RenderData *data = (DirectFB_RenderData *) renderer->driverdata;
+video\directfb\SDL_DirectFB_render.c:    SDL_Window *window = renderer->window;
+video\directfb\SDL_DirectFB_render.c:    DirectFB_RenderData *data = (DirectFB_RenderData *) renderer->driverdata;
+video\directfb\SDL_DirectFB_render.c:    DirectFB_RenderData *data = (DirectFB_RenderData *) renderer->driverdata;
+video\directfb\SDL_DirectFB_render.c:    SDL_Window *window = renderer->window;
+video\directfb\SDL_DirectFB_render.c:    renderer->WindowEvent = DirectFB_WindowEvent;
+video\directfb\SDL_DirectFB_render.c:    renderer->CreateTexture = DirectFB_CreateTexture;
+video\directfb\SDL_DirectFB_render.c:    renderer->UpdateTexture = DirectFB_UpdateTexture;
+video\directfb\SDL_DirectFB_render.c:    renderer->LockTexture = DirectFB_LockTexture;
+video\directfb\SDL_DirectFB_render.c:    renderer->UnlockTexture = DirectFB_UnlockTexture;
+video\directfb\SDL_DirectFB_render.c:    renderer->QueueSetViewport = DirectFB_QueueSetViewport;
+video\directfb\SDL_DirectFB_render.c:    renderer->QueueSetDrawColor = DirectFB_QueueSetViewport;  /* SetViewport and SetDrawColor are (currently) no-ops. */
+video\directfb\SDL_DirectFB_render.c:    renderer->QueueDrawPoints = DirectFB_QueueDrawPoints;
+video\directfb\SDL_DirectFB_render.c:    renderer->QueueDrawLines = DirectFB_QueueDrawPoints;  /* lines and points queue vertices the same way. */
+video\directfb\SDL_DirectFB_render.c:    renderer->QueueFillRects = DirectFB_QueueFillRects;
+video\directfb\SDL_DirectFB_render.c:    renderer->QueueCopy = DirectFB_QueueCopy;
+video\directfb\SDL_DirectFB_render.c:    renderer->QueueCopyEx = DirectFB_QueueCopyEx;
+video\directfb\SDL_DirectFB_render.c:    renderer->RunCommandQueue = DirectFB_RunCommandQueue;
+video\directfb\SDL_DirectFB_render.c:    renderer->RenderPresent = DirectFB_RenderPresent;
+video\directfb\SDL_DirectFB_render.c:    renderer->RenderReadPixels = DirectFB_RenderReadPixels;
+video\directfb\SDL_DirectFB_render.c:    /* renderer->RenderWritePixels = DirectFB_RenderWritePixels; */
+video\directfb\SDL_DirectFB_render.c:    renderer->DestroyTexture = DirectFB_DestroyTexture;
+video\directfb\SDL_DirectFB_render.c:    renderer->DestroyRenderer = DirectFB_DestroyRenderer;
+video\directfb\SDL_DirectFB_render.c:    renderer->SetRenderTarget = DirectFB_SetRenderTarget;
+video\directfb\SDL_DirectFB_render.c:    renderer->info = DirectFB_RenderDriver.info;
+video\directfb\SDL_DirectFB_render.c:    renderer->window = window;      /* SDL window */
+video\directfb\SDL_DirectFB_render.c:    renderer->driverdata = data;
+video\directfb\SDL_DirectFB_render.c:    renderer->info.flags =
+video\directfb\SDL_DirectFB_render.c:        renderer->info.flags |= SDL_RENDERER_PRESENTVSYNC;
+video\directfb\SDL_DirectFB_render.c:        renderer->info.flags |= SDL_RENDERER_PRESENTFLIP2;
+video\directfb\SDL_DirectFB_render.c:        renderer->info.flags |= SDL_RENDERER_PRESENTFLIP3;
+video\directfb\SDL_DirectFB_render.c:        renderer->info.flags |= SDL_RENDERER_SINGLEBUFFER;
+video\directfb\SDL_DirectFB_render.c:    DirectFB_SetSupportedPixelFormats(&renderer->info);
