@@ -11,6 +11,9 @@ res/foo6.png
 res/foo7.png
 res/foo8.png
 res/foo9.png
+res/hands.png
+res/image.bmp
+res/pencil.png
 res/Roboto-Black.ttf
 res/Roboto-BlackItalic.ttf
 res/Roboto-Bold.ttf

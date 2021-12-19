@@ -114,14 +114,17 @@ SDL_Swap16(Uint16 x)
 SDL_FORCE_INLINE Uint32
 SDL_Swap32(Uint32 x)
 {
-  __asm__("bswap %0": "=addTextR"(x):"0"(x));
+    // NOTE: I'm not sure wheater it replaces
+  //__asm__("bswap %0": "=addTextR"(x):"0"(x));
+    x = (x & 0x0000FFFF) << 16 | (x & 0xFFFF0000) >> 16;
+    x = (x & 0x00FF00FF) << 8 | (x & 0xFF00FF00) >> 8;
     return x;
 }
 #elif defined(__GNUC__) && defined(__x86_64__)
 SDL_FORCE_INLINE Uint32
 SDL_Swap32(Uint32 x)
 {
-  __asm__("bswapl %0": "=addTextR"(x):"0"(x));
+  //__asm__("bswapl %0": "=addTextR"(x):"0"(x));
     return x;
 }
 #elif defined(__GNUC__) && (defined(__powerpc__) || defined(__ppc__))
@@ -179,16 +182,16 @@ SDL_Swap64(Uint64 x)
         Uint64 u;
     } v;
     v.u = x;
-  __asm__("bswapl %0 ; bswapl %1 ; xchgl %0,%1": "=addTextR"(v.s.a), "=addTextR"(v.s.b):"0"(v.s.a),
-            "1"(v.s.
-                b));
+  //__asm__("bswapl %0 ; bswapl %1 ; xchgl %0,%1": "=addTextR"(v.s.a), "=addTextR"(v.s.b):"0"(v.s.a),
+            //"1"(v.s.
+                //b));
     return v.u;
 }
 #elif defined(__GNUC__) && defined(__x86_64__)
 SDL_FORCE_INLINE Uint64
 SDL_Swap64(Uint64 x)
 {
-  __asm__("bswapq %0": "=addTextR"(x):"0"(x));
+  //__asm__("bswapq %0": "=addTextR"(x):"0"(x));
     return x;
 }
 #else

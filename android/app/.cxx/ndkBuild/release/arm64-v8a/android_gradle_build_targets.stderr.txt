@@ -1,0 +1,94 @@
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:285:59: warning: format specifies type 'long long' but the argument has type 'SDL_TouchID' (aka 'long') [-Wformat]
+        SDL_EVENT_CASE(SDL_FINGERDOWN) PRINT_FINGER_EVENT(event); break;
+                                       ~~~~~~~~~~~~~~~~~~~^~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:282:50: note: expanded from macro 'PRINT_FINGER_EVENT'
+                (uint) event->tfinger.timestamp, event->tfinger.touchId, \
+                                                 ^~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:285:59: warning: format specifies type 'long long' but the argument has type 'SDL_FingerID' (aka 'long') [-Wformat]
+        SDL_EVENT_CASE(SDL_FINGERDOWN) PRINT_FINGER_EVENT(event); break;
+                                       ~~~~~~~~~~~~~~~~~~~^~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:283:17: note: expanded from macro 'PRINT_FINGER_EVENT'
+                event->tfinger.fingerId, event->tfinger.x, event->tfinger.y, \
+                ^~~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:286:57: warning: format specifies type 'long long' but the argument has type 'SDL_TouchID' (aka 'long') [-Wformat]
+        SDL_EVENT_CASE(SDL_FINGERUP) PRINT_FINGER_EVENT(event); break;
+                                     ~~~~~~~~~~~~~~~~~~~^~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:282:50: note: expanded from macro 'PRINT_FINGER_EVENT'
+                (uint) event->tfinger.timestamp, event->tfinger.touchId, \
+                                                 ^~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:286:57: warning: format specifies type 'long long' but the argument has type 'SDL_FingerID' (aka 'long') [-Wformat]
+        SDL_EVENT_CASE(SDL_FINGERUP) PRINT_FINGER_EVENT(event); break;
+                                     ~~~~~~~~~~~~~~~~~~~^~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:283:17: note: expanded from macro 'PRINT_FINGER_EVENT'
+                event->tfinger.fingerId, event->tfinger.x, event->tfinger.y, \
+                ^~~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:287:61: warning: format specifies type 'long long' but the argument has type 'SDL_TouchID' (aka 'long') [-Wformat]
+        SDL_EVENT_CASE(SDL_FINGERMOTION) PRINT_FINGER_EVENT(event); break;
+                                         ~~~~~~~~~~~~~~~~~~~^~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:282:50: note: expanded from macro 'PRINT_FINGER_EVENT'
+                (uint) event->tfinger.timestamp, event->tfinger.touchId, \
+                                                 ^~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:287:61: warning: format specifies type 'long long' but the argument has type 'SDL_FingerID' (aka 'long') [-Wformat]
+        SDL_EVENT_CASE(SDL_FINGERMOTION) PRINT_FINGER_EVENT(event); break;
+                                         ~~~~~~~~~~~~~~~~~~~^~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:283:17: note: expanded from macro 'PRINT_FINGER_EVENT'
+                event->tfinger.fingerId, event->tfinger.x, event->tfinger.y, \
+                ^~~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:295:62: warning: format specifies type 'long long' but the argument has type 'SDL_TouchID' (aka 'long') [-Wformat]
+        SDL_EVENT_CASE(SDL_DOLLARGESTURE) PRINT_DOLLAR_EVENT(event); break;
+                                          ~~~~~~~~~~~~~~~~~~~^~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:292:51: note: expanded from macro 'PRINT_DOLLAR_EVENT'
+                (uint) event->dgesture.timestamp, event->dgesture.touchId, \
+                                                  ^~~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:295:62: warning: format specifies type 'long long' but the argument has type 'SDL_GestureID' (aka 'long') [-Wformat]
+        SDL_EVENT_CASE(SDL_DOLLARGESTURE) PRINT_DOLLAR_EVENT(event); break;
+                                          ~~~~~~~~~~~~~~~~~~~^~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:293:17: note: expanded from macro 'PRINT_DOLLAR_EVENT'
+                event->dgesture.gestureId, (uint) event->dgesture.numFingers, \
+                ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:296:61: warning: format specifies type 'long long' but the argument has type 'SDL_TouchID' (aka 'long') [-Wformat]
+        SDL_EVENT_CASE(SDL_DOLLARRECORD) PRINT_DOLLAR_EVENT(event); break;
+                                         ~~~~~~~~~~~~~~~~~~~^~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:292:51: note: expanded from macro 'PRINT_DOLLAR_EVENT'
+                (uint) event->dgesture.timestamp, event->dgesture.touchId, \
+                                                  ^~~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:296:61: warning: format specifies type 'long long' but the argument has type 'SDL_GestureID' (aka 'long') [-Wformat]
+        SDL_EVENT_CASE(SDL_DOLLARRECORD) PRINT_DOLLAR_EVENT(event); break;
+                                         ~~~~~~~~~~~~~~~~~~~^~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:293:17: note: expanded from macro 'PRINT_DOLLAR_EVENT'
+                event->dgesture.gestureId, (uint) event->dgesture.numFingers, \
+                ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/events/SDL_events.c:301:51: warning: format specifies type 'long long' but the argument has type 'SDL_TouchID' (aka 'long') [-Wformat]
+                (uint) event->mgesture.timestamp, event->mgesture.touchId,
+                                                  ^~~~~~~~~~~~~~~~~~~~~~~
+11 warnings generated.
+In file included from C:/home/dev/GuiMaker/android/app/jni/SDL/src/render/opengles2/SDL_render_gles2.c:273:
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/render/opengles2/SDL_gles2funcs.h:58:1: warning: incompatible pointer types assigning to 'void (*)(GLuint, GLsizei, const GLchar **, const GLint *)' (aka 'void (*)(unsigned int, int, const char **, const int *)') from 'void (GLuint, GLsizei, const GLchar *const *, const GLint *)' (aka 'void (unsigned int, int, const char *const *, const int *)') [-Wincompatible-pointer-types]
+SDL_PROC(void, glShaderSource, (GLuint, GLsizei, const GLchar **, const GLint *))
+^              ~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/SDL/src/render/opengles2/SDL_render_gles2.c:262:45: note: expanded from macro 'SDL_PROC'
+#define SDL_PROC(ret,func,params) data->func=func;
+                                            ^~~~~
+1 warning generated.
+C:/home/dev/GuiMaker/android/app/jni/src/../../../../main.cpp:436:31: warning: '&&' within '||' [-Wlogical-op-parentheses]
+                                        (hotW.type == Type::Text && !SDL_PointInFRect(&mousePos, &texts[hotW.lastSelected].dstR) ||
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+C:/home/dev/GuiMaker/android/app/jni/src/../../../../main.cpp:436:31: note: place parentheses around the '&&' expression to silence this warning
+                                        (hotW.type == Type::Text && !SDL_PointInFRect(&mousePos, &texts[hotW.lastSelected].dstR) ||
+                                                                 ^
+                                         (                                                                                      )
+C:/home/dev/GuiMaker/android/app/jni/src/../../../../main.cpp:437:32: warning: '&&' within '||' [-Wlogical-op-parentheses]
+                                                hotW.type == Type::Image && !SDL_PointInFRect(&mousePos, &images[hotW.lastSelected].dstR)) &&
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/src/../../../../main.cpp:437:32: note: place parentheses around the '&&' expression to silence this warning
+                                                hotW.type == Type::Image && !SDL_PointInFRect(&mousePos, &images[hotW.lastSelected].dstR)) &&
+                                                                         ^
+                                                (                                                                                        )
+C:/home/dev/GuiMaker/android/app/jni/src/../../../../main.cpp:805:60: warning: '&&' within '||' [-Wlogical-op-parentheses]
+                        if (event.type == SDL_QUIT || event.type == SDL_KEYDOWN && event.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
+                                                   ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/home/dev/GuiMaker/android/app/jni/src/../../../../main.cpp:805:60: note: place parentheses around the '&&' expression to silence this warning
+                        if (event.type == SDL_QUIT || event.type == SDL_KEYDOWN && event.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
+                                                                                ^
+                                                      (                                                                            )
+3 warnings generated.

@@ -1,0 +1,120 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Replace com.test.game with the identifier of your game below, e.g.
+4     com.gamemaker.game
+5-->
+6<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+7    package="org.libsdl.app"
+8    android:installLocation="auto"
+9    android:versionCode="1"
+10    android:versionName="1.0" >
+11
+12    <uses-sdk
+13        android:minSdkVersion="16"
+13-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml
+14        android:targetSdkVersion="26" />
+14-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml
+15
+16    <!-- OpenGL ES 2.0 -->
+17    <uses-feature android:glEsVersion="0x00020000" />
+17-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:12:5-54
+17-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:12:19-51
+18
+19    <!-- Touchscreen support -->
+20    <uses-feature
+20-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:15:5-17:36
+21        android:name="android.hardware.touchscreen"
+21-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:16:9-52
+22        android:required="false" />
+22-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:17:9-33
+23
+24    <!-- Game controller support -->
+25    <uses-feature
+25-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:20:5-22:36
+26        android:name="android.hardware.gamepad"
+26-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:21:9-48
+27        android:required="false" />
+27-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:22:9-33
+28
+29    <!-- External mouse input events -->
+30    <uses-feature
+30-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:25:5-27:36
+31        android:name="android.hardware.type.pc"
+31-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:26:9-48
+32        android:required="false" />
+32-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:27:9-33
+33
+34    <!-- Allow writing to external storage -->
+35    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+35-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:30:5-81
+35-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:30:22-78
+36    <!-- Allow access to the vibrator -->
+37    <uses-permission android:name="android.permission.VIBRATE" />
+37-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:32:5-66
+37-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:32:22-63
+38
+39    <!-- if you want to capture audio, uncomment this. -->
+40    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+41    <!--
+42 Create a Java class extending SDLActivity and place it in a
+43         directory under app/src/main/java matching the package, e.g. app/src/main/java/com/gamemaker/game/MyGame.java
+44 
+45         then replace "SDLActivity" with the name of your class (e.g. "MyGame")
+46         in the XML below.
+47
+48         An example Java class can be found in README-android.md
+49    -->
+50    <application
+50-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:45:5-74:19
+51        android:allowBackup="true"
+51-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:47:9-35
+52        android:debuggable="true"
+53        android:hardwareAccelerated="true"
+53-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:49:9-43
+54        android:icon="@mipmap/ic_launcher"
+54-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:46:9-43
+55        android:label="@string/app_name"
+55-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:45:18-50
+56        android:testOnly="true"
+57        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+57-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:48:9-67
+58
+59        <!--
+60        Example of setting SDL hints from AndroidManifest.xml:
+61        <meta-data android:name="SDL_ENV.SDL_ACCELEROMETER_AS_JOYSTICK" android:value="0"/>
+62        -->
+63
+64        <activity
+64-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:55:9-73:20
+65            android:name="org.libsdl.app.SDLActivity"
+65-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:55:19-45
+66            android:alwaysRetainTaskState="true"
+66-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:57:13-49
+67            android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+67-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:59:13-133
+68            android:label="@string/app_name"
+68-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:56:13-45
+69            android:launchMode="singleInstance" >
+69-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:58:13-48
+70            <intent-filter>
+70-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:61:13-64:29
+71                <action android:name="android.intent.action.MAIN" />
+71-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:62:17-69
+71-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:62:25-66
+72
+73                <category android:name="android.intent.category.LAUNCHER" />
+73-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:63:17-77
+73-->C:\home\dev\GuiMaker\android\app\src\main\AndroidManifest.xml:63:27-74
+74            </intent-filter>
+75            <!-- Drop file event -->
+76            <!--
+77            <intent-filter>
+78                <action android:name="android.intent.action.VIEW" />
+79                <category android:name="android.intent.category.DEFAULT" />
+80                <data android:mimeType="*/*" />
+81            </intent-filter>
+82            -->
+83        </activity>
+84    </application>
+85
+86</manifest>

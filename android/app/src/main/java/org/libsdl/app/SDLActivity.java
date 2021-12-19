@@ -104,6 +104,13 @@ public class SDLActivity extends Activity implements View.OnSystemUiVisibilityCh
         return mMotionListener;
     }
 
+    public void changeWindowFlags()
+    {
+        Log.d("GuiMaker", "changeWindowFlags");
+        // TODO: How to change color of bar?
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+    }
+
     /**
      * This method returns the name of the shared object with the application entry point
      * It can be overridden by derived classes.

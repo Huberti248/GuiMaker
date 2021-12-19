@@ -1,0 +1,1 @@
+[x86] Compile        : SDL2 <= SDL.c

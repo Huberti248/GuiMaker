@@ -17,6 +17,8 @@ public class SDL {
         SDLControllerManager.nativeSetupJNI();
     }
 
+
+
     // This function should be called each time the activity is started
     public static void initialize() {
         setContext(null);

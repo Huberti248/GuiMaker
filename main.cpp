@@ -274,9 +274,19 @@ struct Ui {
 
 	SDL_Rect uiPickerR{};
 
+	bool pressingFontPicker = false;
+	bool hasMotionOnPressingFontPicker = false;
+	bool firstMouseButtonUp = true;
 	int fontPickerScrollOffset{};
 
-	SDL_Point mousePos{};
+	SDL_Point uiMousePos{};
+
+	void setState(State newState)
+	{
+		state = newState;
+		pressingFontPicker = false;
+		firstMouseButtonUp = true;
+	}
 
 	void set(int i, Type type, SDL_FRect dstR)
 	{
@@ -338,13 +348,13 @@ struct Ui {
 			editedText = actionPickerTextIndex;
 			SDL_StartTextInput();
 			std::cout << "editedText" << std::endl;
-			state = State::Main;
+			setState(State::Main);
 		};
 		changeFontTxt.setText(renderer, robotoF, "Change font");
 		changeFontTxt.adjustSize(0.5, 0.5);
 		changeFontTxt.dstR.y = editTextTxt.dstR.y + editTextTxt.dstR.h + 21;
 		changeFontTxt.onClickCallback = [&] {
-			state = State::ChangeTextFont;
+			setState(State::ChangeTextFont);
 		};
 	}
 
@@ -434,7 +444,7 @@ struct Ui {
 						if (SDL_PointInFRect(&mousePos, &img.dstR)) {
 							if (hotW.type == Type::Image && hotW.lastSelected == i && SDL_GetTicks() - lastSelectedImageTicks <= 500) {
 								editedImage = i;
-								state = State::ImagePicker;
+								setState(State::ImagePicker);
 								std::cout << "editedImage" << std::endl;
 							}
 							lastSelectedImageTicks = SDL_GetTicks();
@@ -448,7 +458,7 @@ struct Ui {
 					for (Text& txt : texts) {
 						if (SDL_PointInFRect(&mousePos, &txt.dstR)) {
 							if (hotW.type == Type::Text && hotW.lastSelected == i && SDL_GetTicks() - lastSelectedTextTicks <= 500) {
-								state = State::TextActionPicker;
+								setState(State::TextActionPicker);
 								actionPickerTextIndex = i;
 							}
 							lastSelectedTextTicks = SDL_GetTicks();
@@ -477,7 +487,7 @@ struct Ui {
 					images.back().dstR.y = 0;
 				}
 				if (SDL_PointInRect(&mousePos, &uiPickerR)) {
-					state = State::UiPicker;
+					setState(State::UiPicker);
 				}
 			}
 			if (event.type == SDL_MOUSEBUTTONUP) {
@@ -572,7 +582,7 @@ struct Ui {
 						// TODO: Fix memory leak?
 						images[editedImage].t = texture.second.t;
 						images[editedImage].srcStr = texture.first;
-						state = State::Main;
+						setState(State::Main);
 					}
 				}
 			}
@@ -582,25 +592,42 @@ struct Ui {
 			changeFontTxt.handleEvent(event);
 		}
 		else if (state == State::ChangeTextFont) {
-			for (Text& txt : fontTxts) {
-				if (event.type == SDL_MOUSEBUTTONDOWN && SDL_PointInFRect(&mousePos, &txt.dstR)) {
-					texts[actionPickerTextIndex].setText(renderer, fonts[txt.text], texts[actionPickerTextIndex].text);
-					texts[actionPickerTextIndex].fontStr = txt.text;
-					state = State::Main;
-					break;
+			if (event.type == SDL_MOUSEBUTTONDOWN) {
+				pressingFontPicker = true;
+			}
+			if (event.type == SDL_MOUSEBUTTONUP) {
+				if (!firstMouseButtonUp) {
+					pressingFontPicker = false;
+					if (!hasMotionOnPressingFontPicker) {
+						for (Text& txt : fontTxts) {
+							if (SDL_PointInFRect(&mousePos, &txt.dstR)) {
+								texts[actionPickerTextIndex].setText(renderer, fonts[txt.text], texts[actionPickerTextIndex].text);
+								texts[actionPickerTextIndex].fontStr = txt.text;
+								setState(State::Main);
+								break;
+							}
+						}
+					}
+					hasMotionOnPressingFontPicker = false;
 				}
-				if (event.type == SDL_MOUSEMOTION) {
-					float scaleX, scaleY;
-					SDL_RenderGetScale(renderer, &scaleX, &scaleY);
-					SDL_Point oldMousePos = mousePos;
-					mousePos.x = event.motion.x / scaleX;
-					mousePos.y = event.motion.y / scaleY;
-					int offset = mousePos.y - oldMousePos.y;
-					if (offset > 0 ) {
+				firstMouseButtonUp = false;
+			}
+			if (event.type == SDL_MOUSEMOTION) {
+				float scaleX, scaleY;
+				SDL_RenderGetScale(renderer, &scaleX, &scaleY);
+				SDL_Point oldMousePos = uiMousePos;
+				uiMousePos.x = event.motion.x / scaleX;
+				uiMousePos.y = event.motion.y / scaleY;
+				if (pressingFontPicker) {
+					int offset = uiMousePos.y - oldMousePos.y;
+					if (offset > 0) {
 						fontPickerScrollOffset += offset;
 					}
 					else if (offset < 0) {
 						fontPickerScrollOffset += offset;
+					}
+					if (offset != 0) {
+						hasMotionOnPressingFontPicker = true;
 					}
 				}
 			}
@@ -612,7 +639,7 @@ struct Ui {
 					for (Widgets& w : widgets) {
 						if (SDL_PointInRect(&mousePos, &w.r)) {
 							currWidgets = i;
-							state = State::Main;
+							setState(State::Main);
 							break;
 						}
 						++i;
@@ -672,7 +699,7 @@ struct Ui {
 					++i;
 				}
 			}
-				}
+		}
 		else if (state == State::ImagePicker) {
 			{
 				int i = 0;
@@ -737,8 +764,8 @@ struct Ui {
 			SDL_RenderFillRect(renderer, &addUiR);
 			// TODO: Cleanup
 		}
-			}
-		};
+	}
+};
 
 Ui ui;
 
@@ -749,6 +776,36 @@ int eventWatch(void* userdata, SDL_Event* event)
 		ui.save(prefPath + "data.xml");
 	}
 	return 0;
+}
+
+void changeWindowFlags()
+{
+#ifdef __ANDROID__
+	// retrieve the JNI environment.
+	JNIEnv* env = (JNIEnv*)SDL_AndroidGetJNIEnv();
+
+	// retrieve the Java instance of the SDLActivity
+	jobject activity = (jobject)SDL_AndroidGetActivity();
+
+	// find the Java class of the activity. It should be SDLActivity or a subclass of it.
+	jclass clazz(env->GetObjectClass(activity));
+
+	// find the identifier of the method to call
+	jmethodID method_id = env->GetMethodID(clazz, "changeWindowFlags", "()V");
+
+	// effectively call the Java method
+	env->CallVoidMethod(activity, method_id);
+
+	// clean up the local references.
+	env->DeleteLocalRef(activity);
+	env->DeleteLocalRef(clazz);
+
+	// Warning (and discussion of implementation details of SDL for Android):
+	// Local references are automatically deleted if a native function called
+	// from Java side returns. For SDL this native function is main() itself.
+	// Therefore references need to be manually deleted because otherwise the
+	// references will first be cleaned if main() returns (application exit).
+#endif
 }
 
 int main(int argc, char* argv[])
@@ -771,6 +828,7 @@ int main(int argc, char* argv[])
 	ui.init(renderer, robotoF);
 	ui.load(prefPath + "data.xml", renderer);
 	SDL_AddEventWatch(eventWatch, 0);
+	changeWindowFlags();
 	while (running) {
 #if 1 // EVENT_HANDLING
 		SDL_Event event;

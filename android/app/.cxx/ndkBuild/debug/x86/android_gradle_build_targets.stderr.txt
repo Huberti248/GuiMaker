@@ -1,0 +1,11 @@
+In file included from C:/home/dev/GuiMaker/android/app/jni/SDL/src/SDL.c:29:
+In file included from C:/home/dev/GuiMaker/android/app/jni/SDL/include\SDL.h:36:
+In file included from C:/home/dev/GuiMaker/android/app/jni/SDL/include/SDL_audio.h:33:
+C:/home/dev/GuiMaker/android/app/jni/SDL/include/SDL_endian.h:117:23: error: invalid output constraint '=addTextR' in asm
+  __asm__("bswap %0": "=addTextR"(x):"0"(x));
+                      ^
+C:/home/dev/GuiMaker/android/app/jni/SDL/include/SDL_endian.h:182:50: error: invalid output constraint '=addTextR' in asm
+  __asm__("bswapl %0 ; bswapl %1 ; xchgl %0,%1": "=addTextR"(v.s.a), "=addTextR"(v.s.b):"0"(v.s.a),
+                                                 ^
+2 errors generated.
+make: *** [C:/home/dev/GuiMaker/android/app/build/intermediates/ndkBuild/debug/obj/local/x86/objs-debug/SDL2/src/SDL.o] Error 1

@@ -14,12 +14,29 @@
                         "endOffsets": "182"
                     },
                     "to": {
-                        "startLines": "6",
+                        "startLines": "7",
                         "startColumns": "4",
-                        "startOffsets": "245",
-                        "endLines": "8",
+                        "startOffsets": "302",
+                        "endLines": "9",
                         "endColumns": "12",
-                        "endOffsets": "373"
+                        "endOffsets": "430"
+                    }
+                },
+                {
+                    "source": "C:\\home\\dev\\GuiMaker\\android\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "56",
+                        "endOffsets": "109"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "199",
+                        "endColumns": "56",
+                        "endOffsets": "251"
                     }
                 },
                 {
@@ -32,11 +49,11 @@
                         "endOffsets": "58"
                     },
                     "to": {
-                        "startLines": "5",
+                        "startLines": "6",
                         "startColumns": "4",
-                        "startOffsets": "199",
+                        "startOffsets": "256",
                         "endColumns": "45",
-                        "endOffsets": "240"
+                        "endOffsets": "297"
                     }
                 },
                 {
